@@ -17,7 +17,7 @@ const port = process.env.PORT || 3000
 app.use(userRoutes)
 
 //Configuração paginas estáticas
-app.use(Express.static("src/assets"))
+app.use(Express.static(path.join(__dirname, "src/assets")))
 
 //configuração handlebars
 app.engine('handlebars', engine({defaultLayout: "main.handlebars"}));
