@@ -473,3 +473,8 @@ main .home .redesSociais .instagram a i
         transform: translateY(10px);
     }
 }
+
+a
+{
+    user-select: none;
+}
