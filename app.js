@@ -14,6 +14,8 @@ app.use(Express.static("src/assets"))
 //configuração handlebars
 app.engine('handlebars', engine({defaultLayout: "main.handlebars"}));
 app.set('view engine', 'handlebars');
+app.set('views', './views');
+app.enable('view cache');
 
 app.listen(port, () => {
     console.log("Conectado a porta " + port)
