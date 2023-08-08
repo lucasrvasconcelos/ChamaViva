@@ -5,7 +5,7 @@
   "main": "node.js",
   "type": "module",
   "engines": {
-    "node": "19.x"
+    "node": "18.x"
   },
   "scripts": {
     "start": "node app.js",
