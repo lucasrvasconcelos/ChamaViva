@@ -218,6 +218,48 @@ main .home .sobre iframe
     margin-top: 15px;
 }
 
+main .home .sobre a
+{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 0;
+    background-color: rgba(176, 176, 176, 0.615);
+    color: var(--color-02);
+    font-family: var(--font-01);
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+main .home .sobre a::before
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: var(--color-06);
+    transform: rotate(55deg) translateY(180px);
+    top: 0;
+    left: 0;
+    animation: 1.8s AnimeSaleLuz cubic-bezier(0.19, 1, 0.22, 1) infinite;
+    
+}
+
+@keyframes AnimeSaleLuz {
+    0%
+    {
+        width: 100%;
+        transform: rotate(40deg) translateY(200px);
+    }
+    100%
+    {
+        transform: rotate(40deg) translateY(-200px);
+    }
+}
+
 /* /SOBRE */
 
 
@@ -337,6 +379,7 @@ main .home .shop .shop_description_details a
     color: var(--color-06);
     transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     letter-spacing: 1px;
+    font-size: 20px;
 }
 
 main .home .shop .shop_description_details a:hover
@@ -472,9 +515,4 @@ main .home .redesSociais .instagram a i
     {
         transform: translateY(10px);
     }
-}
-
-a
-{
-    user-select: none;
 }
