@@ -159,10 +159,14 @@ main section .apresentacao img
 
 main section .intagram-info a
 {
-  margin-left: 15px;
   color: var(--color-06);
   text-decoration: none;
   font-family: var(--font-01);
+  margin-top: 42px;
+  width: fit-content;
+  font-size: 20px;
+  display: block;
+  transform: translateX(-89px);
 }
 
 main section .datas
@@ -236,7 +240,7 @@ main section .endereco h1
 {
   font-family: var(--font-01);
   letter-spacing: 2px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: normal;
   color: var(--color-06);
 }
@@ -245,6 +249,7 @@ main section .endereco iframe
 {
   border-radius: 8px;
   border: 0.5px solid var(--color-01);
+  height: 230px;
 }
 
 main section .mais-informacoes
@@ -321,7 +326,7 @@ main section .mais-informacoes .mais-informacoes_pergunta img
   position: absolute;
   top: -25;
   opacity: 0.3;
-  transform: scale(1.2);
+  transform: scale(1.6);
 }
 
 main section .shop
@@ -471,6 +476,7 @@ main section .doacao p
 main section .doacao p span
 {
   background-color: var(--color-04);
+  cursor: pointer;
   font-weight: bold;
   color: var(--color-07);
   padding: 2px 5px;
