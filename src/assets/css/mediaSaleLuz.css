@@ -1,0 +1,145 @@
+@media (min-width: 730px) {
+    main
+    {
+        padding: 100px  0 ;
+    }
+
+    main section .apresentacao img 
+    {
+        width: 430px;
+    }
+
+    main section .intagram-info a
+    {
+        margin-top: 0;
+        font-size: 25px;
+        transform: translateX(-175px);
+    }
+
+    main section > img
+    {
+        width: 200px;
+    }
+
+    main section > img.img-01
+    {
+        top: 60px;
+    }
+
+    main section > img.img-02
+    {
+        right: -10px;
+    }
+
+    main section .datas img
+    {
+        top: -35px;
+        width: 700px;
+    }
+
+    main section .datas h1
+    {
+        font-size: 80px;
+    }
+
+    main section .endereco
+    {
+        margin-top: 180px;
+    }
+
+    main section .endereco h1
+    {
+        font-size: 35px;
+        padding: 20px 0;
+    }
+
+    main section .endereco iframe
+    {
+        width: 600px;
+        height: 270px;
+    }
+
+    main section .mais-informacoes 
+    {
+        justify-content: center;
+        gap: 35px;
+    }
+
+    main section .mais-informacoes .mais-informacoes_pergunta
+    {
+        margin: 0;   
+    }
+
+    main section .mais-informacoes .mais-informacoes_pergunta h1
+    {
+        width: 320px;
+    }
+
+    main section .shop 
+    {
+        max-width: none;
+    }
+
+    main section .shop h1
+    {
+        font-size: 85px;
+    }
+
+    main section .shop span
+    {
+        font-size: 25px;
+
+    }
+
+    main section .shop a
+    {
+        font-size: 28px;
+        transform: rotate(364deg);
+    }
+
+    main section .doacao
+    {
+        margin-top: 150px;
+    }
+
+    main section .doacao img.doar
+    {
+        top: -107px;
+        left: 54%;
+        width: 200px;
+    }
+
+    main section .doacao p
+    {
+        text-align: center;
+        max-width: 600px;
+        font-size: 35px;
+        letter-spacing: 1px;
+        line-height: 67px;
+    }
+
+    main section .doacao img
+    {
+        width: 297px;
+    }
+
+    main section .doacao img.qrcode {
+
+        top: 63%;
+    }
+
+    main section .maisinfo
+    {
+        max-width: 600px;
+    }
+
+    main section .maisinfo h1
+    {
+        font-size: 55px;
+    }
+
+    main section .maisinfo .redes-sociais a
+    {
+        font-size: 38px;
+    }
+}
