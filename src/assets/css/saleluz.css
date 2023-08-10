@@ -23,7 +23,7 @@
 
 header
 {
-  z-index: 1;
+  z-index: 999;
   padding: 10px 15px;
   display: flex;
   align-items: center;
@@ -44,8 +44,8 @@ header .logo-chamaviva img
 header .open_menu i
 {
   cursor: pointer;
-  font-size: 28px;
-  color: var(--color-05);
+  font-size: 32px;
+  color: var(--color-06);
 }
 
 header .menu
@@ -85,7 +85,7 @@ header .menu nav li a
   display: block;
   width: 200px;
   color: var(--color-01);
-  font-family: "Edo";
+  font-family: var(--font-01);
 }
 
 body
@@ -96,9 +96,44 @@ body
 
 main 
 {
-  padding-top: 190px;
+  padding-top: 150px;
   height: 1500px;
   background-image: url("../img/BACKGROUND/primary.jpg");
+  position: relative;
+  overflow-x: hidden;
+  z-index: 5;
+}
+
+main section > img
+{
+  position: absolute;
+  width: 140px;
+  animation: AnimeImageEffect ease-in-out infinite alternate;
+}
+
+main section > img.img-01
+{
+  top: 80px;
+  left: 0;
+  animation-duration: 5s;
+}
+
+main section > img.img-02
+{
+  top: 458px;
+  right: -21px;
+  animation-duration: 3s;
+}
+
+@keyframes AnimeImageEffect {
+  0%
+  {
+    transform: scale(1);
+  }
+  100%
+  {
+    transform: scale(1.1)
+  }
 }
 
 main section .apresentacao 
@@ -106,10 +141,221 @@ main section .apresentacao
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  margin-top: 50px;
 }
 
 main section .apresentacao img
 {
+  width: 320px;
+}
+
+main section .intagram-info a
+{
+  margin-left: 15px;
+  color: var(--color-06);
+  text-decoration: none;
+  font-family: var(--font-01);
+}
+
+main section .datas
+{
+  position: relative;
+  margin-top: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main section .datas img
+{
+  top: -10px;
   width: 400px;
+  position: absolute;
+  animation: AnimateCircle 1.5s cubic-bezier(0.165, 0.224, 0.44, 1) infinite;
+}
+
+@keyframes AnimateCircle {
+  0%
+  {
+    opacity: 0;
+  }
+  60%
+  {
+    opacity: 0;
+  }
+  70%
+  {
+    opacity: 1;
+  }
+  78%
+  {
+    opacity: 0;
+  }
+  80%
+  {
+    opacity: 1;
+  }
+  100%
+  {
+    opacity: 1;
+  }
+}
+
+main section .datas h1
+{
+  text-align: center;
+  font-family: var(--font-01);
+  color: var(--color-06);
+  font-size: 55px;
+  font-style: italic;
+  font-weight: normal;
+  transform: rotate(-5deg);
+}
+
+
+main section .endereco
+{
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+main section .endereco h1
+{
+  font-family: var(--font-01);
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-weight: normal;
+  color: var(--color-06);
+}
+
+main section .endereco iframe
+{
+  border-radius: 8px;
+  border: 0.5px solid var(--color-01);
+}
+
+main section .mais-informacoes
+{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+main section .mais-informacoes .images-event
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2px;
+}
+
+main section .mais-informacoes .images-event svg
+{
+  top: 0;
+  position: absolute;
+  fill: var(--color-05);
+  width: 224px;
+  z-index: -1;
+}
+
+main section .mais-informacoes .images-event svg:nth-child(2)
+{
+  transform: translateY(192px);
+  z-index: -2;
+  fill: var(--color-05);
+}
+
+main section .mais-informacoes .images-event img
+{
+  margin-left: 38px;
+  margin-top: 15px;
+  width: 219px;
+  height: 181px;
+  object-fit: cover;
+  filter: grayscale(1);
+  border-radius: 5px 15px 5px 15px;
+}
+
+main section .mais-informacoes .mais-informacoes_pergunta
+{
+  margin-top: 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main section .mais-informacoes .mais-informacoes_pergunta h1
+{
+  text-align: center;
+  color: var(--color-06);
+  font-family: var(--font-01);
+  font-weight: normal;
+  font-style: italic;
+}
+
+main section .mais-informacoes .mais-informacoes_pergunta img
+{
+  position: absolute;
+  top: -25;
+  opacity: 0.3;
+}
+
+main section .shop
+{
+  margin-top: 125px;
+  position: relative;
+}
+
+main section .shop h1
+{
+  text-align: center;
+  font-size: 40px;
+  transform: rotate(-5deg);
+  color: var(--color-06);
+  font-family: var(--font-01);
+  font-weight: normal;
+}
+
+main section .shop span
+{
+  display: block;
+  margin-top: 5px;
+  margin-left: 55px;
+  font-size: 20px;
+  font-family: var(--font-01);
+  font-weight: normal;
+  color: var(--color-06);
+  transform: rotate(-5deg);
+}
+
+main section .shop a
+{
+  display: block;
+  bottom: -17px;
+  right: 0;
+  font-size: 20px;
+  position: absolute;
+  text-decoration: none;
+  color: var(--color-06);
+  font-family: monospace;
+  text-transform: uppercase;
+  transform: translateX(-18px);
+  background-color: var(--color-05);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
 }
