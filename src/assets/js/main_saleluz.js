@@ -25,8 +25,12 @@ copy_chave.addEventListener("click", async(e) => {
 const load = document.querySelector(".load")
 const header = document.querySelector("header")
 const main = document.querySelector("main")
-const tempload = 2000
+const tempload = 0
+
 window.addEventListener("load", () => {
+
+    //Atualizando data antes de mostrar tela
+    countDate()
 
     setTimeout(() => {
         header.style.display = "flex"
@@ -35,3 +39,40 @@ window.addEventListener("load", () => {
     }, tempload);
     
 })
+
+const days = document.querySelector("#days")
+const hours = document.querySelector("#hours")
+const minutes = document.querySelector("#mins")
+const seconds = document.querySelector("#sec")
+
+const DateTime = "09 Nov 2023"
+
+function countDate(){
+
+    const eventDate = new Date(DateTime)
+    const currentDate = new Date()
+
+    if(currentDate < eventDate){
+        const totalseconds = (eventDate - currentDate) / 1000
+
+        const daysTime = Math.floor( totalseconds / 3600 / 24 )
+        const hoursTime = Math.floor( (totalseconds / 3600 ) % 24 )
+        const minsTime = Math.floor( (totalseconds / 60) % 60 )
+        const minsSeconds = Math.floor( (totalseconds) % 60 )
+    
+        days.innerHTML = formateTime(daysTime) 
+        hours.innerHTML = formateTime(hoursTime) 
+        minutes.innerHTML = formateTime(minsTime) 
+        seconds.innerHTML = formateTime(minsSeconds) 
+    }
+   
+}
+
+function formateTime(x){
+    return x < 10 ? `${x}` : x
+}
+
+setInterval(countDate, 1000)
+
+    
+

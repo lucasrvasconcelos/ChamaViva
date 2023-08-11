@@ -31,7 +31,8 @@ html
 
 body
 {
-  background-color: var(--color-07);
+  background-color: var(--color-06);
+  overflow-x: hidden;
 }
 
 body .load
@@ -102,14 +103,49 @@ header
   position: fixed;
   top: 0;
   left: 0;
-
+  border-bottom: 0.5px groove var(--color-05) ;
   display: none;
 }
 
 header .logo-chamaviva img
 {
   height: 50px;
+}
 
+header .time-date
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+header .time-date .elements-time 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3px;
+  overflow: hidden;
+}
+
+header .time-date .elements-time span
+{
+  color: var(--color-06);
+  font-family: var(--font-01);
+  font-size: 29px;
+  text-align: center;
+ 
+}
+
+header .time-date .elements-time span:nth-child(2)
+{
+  font-weight: normal;
+  font-size: 14px;
+  background-color: var(--color-04);
+  padding: 1px 12px;
+  
 }
 
 header .open_menu i
@@ -159,11 +195,6 @@ header .menu nav li a
   font-family: var(--font-01);
 }
 
-body
-{
-  background-color: var(--color-06);
-  overflow-x: hidden;
-}
 
 main 
 {
