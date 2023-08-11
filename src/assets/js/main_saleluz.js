@@ -25,7 +25,7 @@ copy_chave.addEventListener("click", async(e) => {
 const load = document.querySelector(".load")
 const header = document.querySelector("header")
 const main = document.querySelector("main")
-const tempload = 0
+const tempload = 200
 window.addEventListener("load", () => {
 
     setTimeout(() => {
