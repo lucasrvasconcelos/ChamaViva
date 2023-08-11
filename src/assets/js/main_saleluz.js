@@ -32,6 +32,6 @@ window.addEventListener("load", () => {
         header.style.display = "flex"
         main.style.display = "block"
         load.style.display = "none"
-    }, 1000);
+    }, 2000);
     
 })
