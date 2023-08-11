@@ -27,7 +27,11 @@ const header = document.querySelector("header")
 const main = document.querySelector("main")
 
 window.addEventListener("load", () => {
-    header.style.display = "flex"
-    main.style.display = "block"
-    load.style.display = "none"
+
+    setTimeout(() => {
+        header.style.display = "flex"
+        main.style.display = "block"
+        load.style.display = "none"
+    }, 1000);
+    
 })
