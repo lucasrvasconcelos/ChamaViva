@@ -1,4 +1,24 @@
 @media (min-width: 700px) {
+
+    header .time-date
+    {
+        gap: 8px;
+    }
+
+    header .time-date .elements-time span {
+        font-size: 46px;
+    }
+
+    header .time-date .elements-time span:nth-chilt(2)
+    {
+        font-size: 16px;
+    }
+
+    header .logo-chamaviva img
+    {
+        height: 80px;
+    }
+
     main
     {
         padding: 100px  0 ;
@@ -146,11 +166,6 @@
     header .open_menu i
     {
         font-size: 45px;
-    }
-
-    header .logo-chamaviva img
-    {
-        height: 80px;
     }
 
     main

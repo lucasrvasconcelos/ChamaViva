@@ -94,7 +94,7 @@ body .load span:nth-child(3)
 header
 {
   z-index: 999;
-  padding: 10px 15px;
+  padding: 10px 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -109,7 +109,7 @@ header
 
 header .logo-chamaviva img
 {
-  height: 50px;
+  height: 52px;
 }
 
 header .time-date
