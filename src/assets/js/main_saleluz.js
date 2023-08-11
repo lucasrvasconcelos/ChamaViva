@@ -69,7 +69,7 @@ function countDate(){
 }
 
 function formateTime(x){
-    return x < 10 ? `${x}` : x
+    return x < 10 ? `0${x}` : x
 }
 
 setInterval(countDate, 1000)
