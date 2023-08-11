@@ -1,4 +1,4 @@
-@media (min-width: 730px) {
+@media (min-width: 700px) {
     main
     {
         padding: 100px  0 ;
@@ -6,14 +6,14 @@
 
     main section .apresentacao img 
     {
-        width: 430px;
+        width: 600px;
     }
 
     main section .intagram-info a
     {
         margin-top: 0;
-        font-size: 25px;
-        transform: translateX(-175px);
+        font-size: 35px;
+        transform: translateX(-200px);
     }
 
     main section > img
@@ -49,14 +49,14 @@
 
     main section .endereco h1
     {
-        font-size: 35px;
+        font-size: 55px;
         padding: 20px 0;
     }
 
     main section .endereco iframe
     {
         width: 600px;
-        height: 270px;
+        height: 300px;
     }
 
     main section .mais-informacoes 
@@ -97,19 +97,14 @@
         transform: rotate(364deg);
     }
 
-    main section .doacao
-    {
-        margin-top: 150px;
-    }
-
-    main section .doacao img.doar
+    main section .doacao-description img.doar
     {
         top: -107px;
-        left: 54%;
+        left: 56%;
         width: 200px;
     }
 
-    main section .doacao p
+    main section .doacao-description p
     {
         text-align: center;
         max-width: 600px;
@@ -123,10 +118,6 @@
         width: 297px;
     }
 
-    main section .doacao img.qrcode {
-
-        top: 63%;
-    }
 
     main section .maisinfo
     {
@@ -143,3 +134,175 @@
         font-size: 38px;
     }
 }
+
+@media (min-width: 1250px)
+{
+
+    header
+    {
+        padding: 2px 15px;
+    }
+
+    header .open_menu i
+    {
+        font-size: 45px;
+    }
+
+    header .logo-chamaviva img
+    {
+        height: 80px;
+    }
+
+    main
+    {
+        padding-bottom: 100px;
+    }
+
+    main section > img
+    {
+        width: 300px;
+    }
+
+    main section .apresentacao img
+    {
+        width: 700px;
+    }
+
+    main section .intagram-info
+    {
+        position: relative;
+    }
+
+    main section .intagram-info a
+    {
+        font-size: 40px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-600px);
+    }
+
+    main section .datas h1
+    {
+        font-size: 120px;
+    }
+
+    main section .datas img
+    {
+        width: 1000px;
+    }
+
+    main section .endereco
+    {
+        flex-direction: row;
+        gap: 148px;
+    }
+
+    main section .endereco h1
+    {
+        font-size: 50px;
+    }
+
+    main section .mais-informacoes .images-event svg
+    {
+        width: 376px;
+        left: 0;
+    }
+
+    main section#maisinformacoes
+    {
+        margin: 100px 0;
+        align-items: normal;
+    }
+
+    main section .mais-informacoes
+    {
+        justify-content: space-around;
+    }
+
+    main section .mais-informacoes .images-event img
+    {
+        width: 353px;
+        height: 268px;
+        transform: translateX(15px);
+    }
+
+    main section .mais-informacoes .mais-informacoes_pergunta h1
+    {
+        width: 400px;
+        font-size: 60px;
+        color: var(--color-06);
+        text-shadow: 5px 5px 0px transparent; 
+        transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 1;
+    }
+
+    main section .mais-informacoes .mais-informacoes_pergunta h1:hover
+    {
+        text-shadow: 5px 5px 0px var(--color-04); 
+    }
+
+    main section .mais-informacoes .mais-informacoes_pergunta img
+    {
+        transform: scale(2.8);
+        z-index: -1;
+    }
+
+    main #shop 
+    {
+        padding-top: 80px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+    }
+
+    main #shop section .shop
+    {
+        margin-top: 0;
+    }
+
+    main #shop section .shop a
+    {
+        font-size: 32px;
+        padding: 8px 20px;
+        right: 53px;
+        bottom: -72px
+    }
+
+    main section#doar
+    {
+        flex-direction: row;
+        gap: 35px;
+    }
+    
+    main section .doacao img.qrcode
+    {
+        width: 238px;
+        transform: translateX(-50%)  translateY(-84px);
+    }
+
+    main section#mais
+    {
+        padding-top: 115px;
+    }
+
+    main section .maisinfo
+    {
+        max-width: none;
+    }
+
+    main section .maisinfo h1
+    {
+        display: block;
+        max-width: 100%;
+        font-size: 55px;
+    }
+
+    main section .maisinfo .redes-sociais
+    {
+        flex-direction: row;
+        gap: 50px;
+    }
+} 

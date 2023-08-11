@@ -25,13 +25,13 @@ copy_chave.addEventListener("click", async(e) => {
 const load = document.querySelector(".load")
 const header = document.querySelector("header")
 const main = document.querySelector("main")
-
+const tempload = 0
 window.addEventListener("load", () => {
 
     setTimeout(() => {
         header.style.display = "flex"
         main.style.display = "block"
         load.style.display = "none"
-    }, 2000);
+    }, tempload);
     
 })

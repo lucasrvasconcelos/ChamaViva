@@ -515,6 +515,15 @@ main section .shop-itens img {
     transform: translateX(50px);
 }
 
+main section#doar
+{
+  padding-top: 179px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
 
 main section .doacao
 {
@@ -522,18 +531,23 @@ main section .doacao
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 75px;
   position: relative;
 }
 
-main section .doacao h1
+main section .doacao-description
+{
+  position: relative;
+}
+
+main section .doacao-description h1
 {
   font-family: var(--font-01);
   color: var(--color-06);
   font-size: 40px;
+  text-align: center;
 }
 
-main section .doacao p
+main section .doacao-description p
 {
   color: var(--color-06);
   font-family: 'Courier New', Courier, monospace;
@@ -545,7 +559,7 @@ main section .doacao p
   line-height: 27px;
 }
 
-main section .doacao p span
+main section .doacao-description p span
 {
   background-color: var(--color-04);
   cursor: pointer;
@@ -553,6 +567,16 @@ main section .doacao p span
   color: var(--color-07);
   padding: 2px 5px;
   border-radius: 8px;
+}
+
+main section .doacao-description img.doar
+{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-215%);
+  width: 100px;
+  opacity: 0.5;
 }
 
 main section .doacao img
@@ -565,22 +589,12 @@ main section .doacao img.smartphone
   margin-top: 47px;
 }
 
-main section .doacao img.doar
-{
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-215%);
-  width: 100px;
-  opacity: 0.5;
-}
-
 main section .doacao img.qrcode
 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(50px);
+  transform: translateX(-50%) translateY(-65px);
   border-radius: 4px;
   width: 204px;
   background-color: white;
