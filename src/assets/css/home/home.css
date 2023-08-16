@@ -1,0 +1,472 @@
+
+@font-face {
+    font-family: "Retrim";
+    src: url(".././fonts/Retrim\ Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "Kitchen";
+    src: url(".././fonts/Kitchen\ Bold.otf");
+  }
+
+  @font-face {
+    font-family: "RONORGERIONDEMO";
+    src: url(".././fonts/RONORGERIONDEMO-Regular.otf");
+  }
+ 
+  @font-face {
+    font-family: "Mantilda";
+    src: url(".././fonts/Mantilda\ _\ Briant.otf");
+  }
+
+  @font-face {
+    font-family: "Lemon";
+    src: url(".././fonts/LEMONMILK-Bold.otf");
+  }
+
+:root
+{
+    --color-01:#D91604;
+    --color-02:#ff6d00;
+    --color-03:#ffae00;
+    --color-04:#F2F2F2;
+    --color-05:#D962A3;
+    --color-06:white;
+    --color-07:black;
+
+    --font-01: "Retrim";
+    --font-02: "Kitchen";
+    --font-03: "RONORGERIONDEMO";
+    --font-04: "Mantilda";
+    --font-05: "Lemon";
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    background-image: url("../../img/chamaviva/background-01.png");
+}
+
+header
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    font-family: var(--font-01);
+}
+
+header .logo
+{
+    display: none;
+    width: 320px;
+    height: 100px;
+}
+
+header .logo img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+header .menu
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header .menu nav{
+    display: block;
+    width: 100%;
+}
+
+header .menu nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    list-style: none;
+
+    background-color: var(--color-01);
+    width: 100%;
+}
+
+header .menu nav ul li
+{
+    flex-grow: 1;
+    padding: 10px 0;
+}
+
+header .menu nav ul li:hover
+{
+    background-color: var(--color-02);
+}
+
+header .menu nav ul li a
+{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+
+    color: var(--color-06);
+}
+
+header .menu nav ul li a i
+{
+    color: var(--color-06);
+    font-size: 35px;
+}
+
+main
+{
+    position: relative;
+    padding: 128px  0;
+}
+
+main section
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main section#inicio
+{
+    gap: 55px;
+}
+
+main section .chamaviva-logo
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main section .chamaviva-logo .text-logo
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* line-height: 106px; */
+}
+
+main section .chamaviva-logo .text-logo img
+{
+    position: absolute;
+    top: -58px;
+    left: -69px;
+    width: 142px;
+    height: 113px;
+    object-fit: contain;
+    z-index: 1;
+
+    opacity: 0;
+    transform: scale(0);
+
+    animation: AnimeChameLogo 15s 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite ;
+} 
+
+@keyframes AnimeChameLogo {
+    0%
+    {
+        opacity: 0;
+        transform: scale(0);
+    }
+    10%
+    {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+main section .chamaviva-logo .text-logo h1
+{
+    font-size: 119px;
+    font-family: var(--font-02);
+    color: var(--color-02);
+    font-weight: bold;
+    transform: translateX(22px);
+    letter-spacing: 2px;
+    text-shadow: 4px 4px 0px var(--color-04), 8px 8px 0px var(--color-02);
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+main section .chamaviva-logo .text-logo:hover h1
+{
+    text-shadow: 4px 4px 0px var(--color-04), 
+                 8px 8px 0px var(--color-02), 
+                 12px 8px 0px var(--color-04), 
+                 16px 8px 0px var(--color-02),
+                 20px 8px 0px var(--color-04), 
+                 24px 8px 0px var(--color-02);
+}
+
+main section .chamaviva-logo .text-logo span
+{
+    position: absolute;
+    top: 146px;
+    left: -123px;
+    font-family: var(--font-04);
+    font-size: 46px;
+    transform: rotate(-90deg);
+    font-weight: bold;
+}
+
+main section .descricao-evento 
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    position: relative;
+    margin-top: 48px;
+}
+
+main section .descricao-evento .descricao-detalhes
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 286px;
+    padding: 46px 15px 15px 15px;
+    height: 489px;
+    background-color: var(--color-02);
+    clip-path: polygon(0 6%, 9% 3%, 16% 4%, 23% 6%, 31% 5%, 42% 5%, 51% 5%, 60% 8%, 70% 5%, 85% 5%, 93% 4%, 100% 4%, 100% 100%, 0 100%);
+    transform: translateX(26px);
+}
+
+main section .descricao-evento .descricao-detalhes p
+{
+    font-family: var(--font-02);
+    text-align: right;
+    font-size: 32px;
+    color: var(--color-04);
+    letter-spacing: 1px;
+    line-height: 36px;
+    font-weight: normal;
+}
+
+main section .descricao-evento .descricao-detalhes a
+{
+    color: var(--color-04);
+    font-size: 15px;
+    font-family: var(--font-01);
+    text-decoration: none;
+}
+
+
+main section .descricao-evento img
+{
+    width: 300px;
+    height: 213px;
+    top: 213px;
+    left: 0;
+    position: absolute;
+    object-fit: cover;
+    filter: grayscale(0.9);
+    border-radius: 8px;
+    clip-path: polygon(0 9%, 8% 7%, 15% 4%, 31% 2%, 41% 1%, 68% 2%, 85% 2%, 93% 3%, 100% 4%, 100% 100%, 0 99%);
+}
+
+
+main section#sobre
+{
+    margin-top: 89px;
+}
+
+main section .sobre
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+}
+
+main section .sobre .lideres
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main section .sobre .lideres .lider
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+main section .sobre .lideres .lider h1
+{
+    font-size: 25px;
+    font-family: var(--font-01);
+    color: var(--color-04);
+    padding: 3px 10px;
+    border-radius: 4px;
+    background-color: var(--color-02);
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+main section .sobre .lideres .lider img
+{
+    height: 320px;
+    object-fit: cover;
+    background-color: var(--color-05);
+}
+
+main section .sobre .lideres .lider p
+{
+    font-family: var(--font-02);
+    font-weight: normal;
+    color: var(--color-01);
+    font-size: 28px;
+    max-width: 310px;
+    text-align: center;
+}
+
+main section .sobre > span
+{
+    font-family: var(--font-01);
+    font-size: 19px;
+    color: var(--color-06);
+    background-color: var(--color-02);
+    padding: 4px 10px;
+    border-radius: 8px;
+    width: 320px;
+    text-align: center;
+}
+
+main section .sobre .sobre-titulo
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+}
+
+main section .sobre .sobre-titulo img
+{
+    position: absolute;
+    top: -60px;
+    right: 0px;
+    width: 100px;
+
+}
+
+main section .sobre .sobre-titulo .titulo
+{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 72px;
+}
+
+main section .sobre .sobre-titulo .titulo h1
+{
+    font-family: var(--font-05);
+    font-size: 71px;
+    font-weight: bold;
+    color: var(--color-03);
+    text-align: left;
+    text-shadow: 3px 3px 0px var(--color-06), 
+                 5px 5px 0px var(--color-03);
+}
+main section .sobre .sobre-titulo .titulo h1:nth-child(1) { color: var(--color-03);}
+main section .sobre .sobre-titulo .titulo h1:nth-child(2) { color: var(--color-02);}
+main section .sobre .sobre-titulo .titulo h1:nth-child(3) { color: var(--color-01);}
+
+main section .sobre .sobre-titulo p
+{
+    max-width: 320px;
+    padding: 5px 15px;
+    word-wrap: break-word;
+    font-size: 20px;
+    font-family: var(--font-02);
+    font-weight: normal;
+    line-height: 25px;
+    margin-top: 25px;
+    background-color: var(--color-03);
+    color: var(--color-04);
+    letter-spacing: 2px;
+}
+
+main section#culto
+{
+    margin-top: 90px;
+}
+
+main section .culto-logo
+{
+    padding: 10px;
+    position: relative;
+}
+
+main section .culto-logo .culto-titulo
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: rotate(-6deg);
+}
+
+main section .culto-logo .culto-titulo h1
+{
+    font-family: var(--font-02);
+    font-size: 144px;
+    color: var(--color-03);
+    text-shadow: 4px 4px 0px var(--color-07);
+}
+
+main section .culto-logo > span:nth-child(2)
+{
+    position: absolute;
+    top: 292px;
+    left: 50%;
+    transform: rotate(-6deg) translateX(-50%);
+    color: var(--color-07);
+    font-family: var(--font-04);
+    font-size: 72px;
+    font-weight: bold;
+    text-shadow: 2px 2px 0px var(--color-06);
+}

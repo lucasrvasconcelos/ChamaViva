@@ -9,5 +9,9 @@ export default class UserControler {
     async saleluz(req, res) {
         res.render("saleluz", { layout: 'saleluz' } )
     } 
+
+    async eventos(req, res) {
+        res.render("saleluz_new", { layout: 'saleluz_new' } )
+    } 
 }
 
