@@ -432,7 +432,13 @@ main section .sobre .sobre-titulo p
 
 main section#culto
 {
-    margin-top: 90px;
+    overflow: hidden;
+    padding: 90px 0;
+}
+
+main section .culto
+{
+    position: relative;
 }
 
 main section .culto-logo
@@ -470,3 +476,79 @@ main section .culto-logo > span:nth-child(2)
     font-weight: bold;
     text-shadow: 2px 2px 0px var(--color-06);
 }
+
+main section .culto-logo > span:nth-child(3)
+{
+    position: absolute;
+    top: 407px;
+    right: 22px;
+    font-family: var(--font-05);
+    color: var(--color-02);
+    font-size: 35px;
+}
+
+main section .culto .culto-descricao
+{
+    margin-top: 105px;
+}
+
+main section .culto .culto-descricao p
+{
+    max-width: 320px;
+    font-size: 18px;
+    font-family: var(--font-05);
+    letter-spacing: 2px;
+    text-align: right;
+    font-weight: normal;
+    color: var(--color-06);
+    line-height: 40px;
+}   
+
+main section .culto .final-descricao-culto
+{
+    padding-top: 87px;
+    position: relative;
+
+}
+
+main section .culto .final-descricao-culto span
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg) translateX(-82px);
+    font-family: var(--font-05);
+    font-size: 25px;
+    color: var(--color-03);
+    text-shadow: 0px 0px 10px var(--color-06);
+}
+
+main section .culto .final-descricao-culto h1
+{
+    text-align: center;
+    font-family: var(--font-01);
+    width: fit-content;
+    transform: translateX(40px);
+    font-size: 21px;
+    color: var(--color-02);
+    letter-spacing: 2px;
+}
+
+main section .culto .final-descricao-culto img.svg03
+{
+    transform: translateX(75px) translateY(8px) rotateX(180deg);
+    height: 28px;
+    object-fit: contain;
+    filter: hue-rotate(26deg);
+}
+
+main section .culto img.svg04
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(445px) translateX(39px) rotate(54deg);
+    z-index: -1;
+    width: 320px;
+}
+
