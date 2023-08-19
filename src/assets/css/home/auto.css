@@ -1,0 +1,126 @@
+font-face {
+    font-family: "Retrim";
+    src: url(".././fonts/Retrim\ Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "Kitchen";
+    src: url(".././fonts/Kitchen\ Bold.otf");
+  }
+
+  @font-face {
+    font-family: "RONORGERIONDEMO";
+    src: url(".././fonts/RONORGERIONDEMO-Regular.otf");
+  }
+ 
+  @font-face {
+    font-family: "Mantilda";
+    src: url(".././fonts/Mantilda\ _\ Briant.otf");
+  }
+
+  @font-face {
+    font-family: "Lemon";
+    src: url(".././fonts/LEMONMILK-Bold.otf");
+  }
+
+  @font-face {
+    font-family: "Edo";
+    src: url(".././fonts/edosz.ttf");
+  }
+
+:root
+{
+    --color-01:#D91604;
+    --color-02:#ff6d00;
+    --color-03:#ffae00;
+    --color-04:#F2F2F2;
+    --color-05:#D962A3;
+    --color-06:white;
+    --color-07:black;
+
+    --font-01: "Retrim";
+    --font-02: "Kitchen";
+    --font-03: "RONORGERIONDEMO";
+    --font-04: "Mantilda";
+    --font-05: "Lemon";
+    --font-06: "Edo";
+}
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+@media (min-width: 550px){
+    main section .chamaviva-logo .text-logo h1
+    {
+        font-size: 180px;
+    }
+
+    main section .chamaviva-logo .text-logo span
+    {
+        top: 211px;
+        left: -190px;
+        font-size: 70px;
+    }
+
+    main section .chamaviva-logo .text-logo img
+    {
+        
+        height: 170px;
+        top: -95px;
+        left: -69px;
+    }
+
+    main section .descricao-evento .descricao-detalhes
+    {
+        width: 460px;
+        height: 526px; 
+        padding: 69px 15px 15px 15px;
+    }
+
+    main section .descricao-evento .descricao-detalhes p
+    {
+        font-size: 44px;
+        letter-spacing: 2px;
+    }
+
+    main section .descricao-evento img
+    {
+        width: 472px;
+        clip-path: none;
+    }
+
+    main section .descricao-evento .descricao-detalhes a
+    {
+        font-size: 20px;
+    }
+
+    main section .sobre .lideres 
+    {
+        gap: 64px;
+    }
+
+    main section .sobre .lideres .lider h1 
+
+    {
+        font-size: 38px;
+    }
+
+    main section .sobre .lideres .lider img 
+    {
+        height: 419px;
+        width: 362px;
+    }
+
+    main section .sobre .lideres .lider p
+    {
+        max-width: 419px;
+        font-size: 34px;
+    }
+}
