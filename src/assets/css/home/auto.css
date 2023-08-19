@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
 font-face {
     font-family: "Retrim";
     src: url(".././fonts/Retrim\ Regular.ttf");
@@ -37,6 +41,7 @@ font-face {
     --color-05:#D962A3;
     --color-06:white;
     --color-07:black;
+    --color-08: #2b7f66;
 
     --font-01: "Retrim";
     --font-02: "Kitchen";
@@ -44,6 +49,7 @@ font-face {
     --font-04: "Mantilda";
     --font-05: "Lemon";
     --font-06: "Edo";
+    --font-07: 'Montserrat', sans-serif;
 }
 
 
@@ -57,6 +63,11 @@ font-face {
 
 
 @media (min-width: 550px){
+
+    main
+    {
+        overflow: hidden;
+    }
     main section .chamaviva-logo .text-logo h1
     {
         font-size: 180px;
@@ -122,5 +133,484 @@ font-face {
     {
         max-width: 419px;
         font-size: 34px;
+    }
+
+    main section .sobre > span 
+    {
+        width: 409px;
+        font-size: 22px;
+    }
+
+    main section .sobre .sobre-titulo
+    {
+        padding-right: 45px;
+    }
+    main section .sobre .sobre-titulo .titulo
+    {
+        line-height: 99px;
+    }
+
+    main section .sobre .sobre-titulo .titulo h1
+    {
+        font-size: 106px;
+    }
+
+    main section .sobre .sobre-titulo p 
+    {
+        max-width: 436px;
+        padding: 15px;
+    }
+
+    main section .culto-logo .culto-titulo h1 
+    {
+        font-size: 180px;
+    }
+
+    main section .culto-logo > span:nth-child(2)
+    {
+        top: 396px;
+    }
+
+    main section .culto-logo > span:nth-child(3)
+    {
+        top: 496px;
+    }
+
+    main section .culto img.svg04
+    {
+        transform: translateY(634px) translateX(40px) rotate(54deg);
+    }
+
+    main section .culto .final-descricao-culto
+    {
+        padding-top: 110px;
+    }
+
+    main section .culto .final-descricao-culto h1
+    {
+        font-size: 22px;
+        
+    }
+
+    main section .culto .final-descricao-culto span
+    {
+        font-size: 49px;
+        left: -28px;
+        transform: rotate(-90deg) translateX(-116px);
+    }
+
+    main section .culto .final-descricao-culto img.svg03
+    {
+        height: 51px;
+    }
+
+    main section .endereco .localizacao-name
+    {
+        gap: 85px;
+    }
+
+    main section .endereco .localizacao-name .swiper
+    {
+        max-width: 350px;
+    }
+
+    main section .endereco .localizacao-name .nome-rua h1
+    {
+        font-size: 32px;
+    }
+  
+    main section .endereco .localizacao-name .nome-rua > img
+    {
+        max-width: 70px;
+        top: -20px;
+        left: -43px;
+    }
+
+    main section#mensagem-final .mensagem-final h1
+    {
+        font-size: 50px;
+    }
+
+    main section#mensagem-final .mensagem-final span
+    {
+        font-size: 352px;
+    }
+}
+
+@media (min-width: 1200px){
+
+
+    main
+    {
+        padding: 35px 0 0 40px;
+    }
+
+    main section#inicio
+    {
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 145px;
+    }
+
+    main section .chamaviva-logo
+    {
+        transform: translateY(58px);
+    }
+
+    main section .chamaviva-logo .text-logo
+    {
+        line-height: 155px;
+        
+    }
+
+    main section .chamaviva-logo .text-logo h1
+    {
+
+        font-family: var(--font-07);
+        font-weight: 800;
+    }
+
+    main section .descricao-evento
+    {
+        margin-top: 0;
+    }
+
+    main section#inicio
+    {
+        position: relative;
+        overflow: hidden;
+        justify-content: space-around;
+        padding: 42px 58px 330px 58px;
+        gap: 55px;
+    }
+
+    main section#inicio img.effect01 {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        transform: rotate(216deg) translateY(110px);
+        width: 800px;
+    }
+
+    main section#sobre
+    {
+        margin-top: 0;
+        transform: translateY(-190px);
+
+    }
+
+    main section#sobre .sobre
+    {
+        flex-direction: row;
+        position: relative;
+    }
+
+    main section .sobre .lideres
+    {
+        flex-direction: row;
+    }
+
+    main section .sobre > span
+    {
+        position: absolute;
+        left: 0;
+        bottom: -175px;
+        color: var(--color-02);
+        background-color: transparent;
+        font-family: var(--font-06);
+        font-size: 38px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        box-shadow: 4px 4px 0px var(--color-03),
+                    -4px -4px 0px var(--color-03),
+                    -4px 4px 0px var(--color-03),
+                    4px -4px 0px var(--color-03);
+        transition: all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    main section .sobre > span:hover
+    {
+        box-shadow: 10px 10px 0px var(--color-02),
+                    -10px -10px 0px var(--color-02);
+    }
+
+    main section .sobre .lideres .lider h1
+    {
+        font-size: 28px;
+    }
+
+    main section .sobre .lideres .lider img
+    {
+        width: 233px;
+
+    }
+
+    main section .sobre .lideres .lider p
+    {
+        letter-spacing: 2px;
+        font-size: 25px;
+        line-height: 24px;
+        color: var(--color-07);
+        font-family: var(--font-06);
+        font-weight: bold;
+    }
+
+    main section .sobre .lideres .lider:nth-child(2)
+    {
+        flex-direction: column-reverse;
+        padding-top: 255px;
+    }
+
+    main section .sobre .sobre-titulo .titulo
+    {
+        line-height: 147px;
+    }
+
+    main section .sobre .sobre-titulo .titulo h1 
+    {
+        font-family: var(--font-07);
+        font-weight: 900;
+        font-size: 180px;
+        text-shadow: none;
+    }
+
+    main section .sobre .sobre-titulo .titulo h1:nth-child(1)
+    {
+        color: var(--color-03);
+    }
+
+    main section .sobre .sobre-titulo .titulo h1:nth-child(2)
+    {
+        color: var(--color-03);
+    }
+
+    main section .sobre .sobre-titulo .titulo h1:nth-child(3)
+    {
+        color: var(--color-02);
+    }
+
+    main section .sobre .sobre-titulo img
+    {
+        transform: translateX(-370px);
+        width: 150px;
+        top: -80px;
+        right: -89px;
+    }
+
+    main section#culto
+    {
+        padding: 250px 0;
+        position: relative;
+    }
+
+    main section .culto
+    {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 55px;
+        position: relative;
+        padding: 0 0 35px 0;
+        transform: translateX(-222px);
+    }
+
+   
+    main section .culto-logo .culto-titulo
+    {
+        transform: rotate(0deg);
+        line-height: 163px;
+    }
+
+    main section .culto-logo .culto-titulo h1
+
+    {
+        font-family: var(--font-07);
+        font-weight: 700;
+        text-shadow: -20px -10px var(--color-06),
+                     -21px -11px var(--color-03);
+    }
+
+    main section .culto-logo .culto-titulo:hover h1
+    {
+        color: var(--color-02);
+        text-shadow: -20px -10px var(--color-06),
+                     -21px -11px var(--color-02);
+    }
+
+    main section .culto .final-descricao-culto
+    {
+        position: absolute;
+        bottom: -210px;
+        left: 0px;
+    }
+
+    main section .culto .final-descricao-culto h1
+    {
+        font-size: 44px;
+        font-family: var(--font-06);
+        font-weight: normal;
+    }
+
+    main section .culto .final-descricao-culto span 
+    {
+        font-size: 38px;
+        left: -13px;
+    }
+
+    main section .culto .culto-descricao
+    {
+        padding-top: 140px;
+        transform: translateX(40px);
+    }
+
+    main section .culto img.svg04 {
+        transform: translateY(70px) translateX(82px) rotate(55deg);
+    }
+
+    main section#culto 
+    {
+        padding-top: 50px;
+    }
+
+    main section#culto img.effect02 {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        transform: rotate(240deg) translateY(110px);
+        width: 800px;
+    }
+
+
+    
+
+    main section#endereco
+    {
+        padding-top: 100px;
+    }
+
+    main section#endereco .endereco
+    {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 185px;
+    }
+
+    main section .endereco .localizacao .background-effect
+    {
+        clip-path: none;
+        top: -12px;
+        left: -12px;
+        border-radius: 4px;
+        height: 327px;
+        width: 600px;
+        transform: rotate(15deg);
+    }
+
+    main section .endereco .localizacao iframe
+    {
+        width: 600px;
+        box-shadow: 4px -4px 0px var(--color-03),
+                    -4px 4px 0px var(--color-03);
+    }
+
+    main section .endereco .localizacao-name
+    {
+        padding-top: 0;
+    }
+    main section .endereco .localizacao-name .nome-rua
+    {
+        box-shadow: 4px 4px 0px var(--color-07),
+        -4px -4px 0px var(--color-07);
+    }
+
+    main section#mensagem-final .mensagem-final
+    {
+        transform: translateX(-174px) scale(1.8);
+        padding: 0;
+    }
+
+    main section#mensagem-final
+    {
+        padding: 190px 80px;
+    }
+
+    main section#mensagem-final .mensagem-final span
+    {
+        font-size: 322px;
+    }
+
+    main .voltar
+    {
+        align-items: flex-end;
+        
+    }
+
+    main .voltar a
+    {
+        transform: translateX(-40px) translateY(-40px);
+        animation: none;
+    }
+
+
+    /* IMG EFECTS */
+
+    main  img.effect03 {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        transform: rotate(190deg) translateY(500px);
+        width: 800px;
+    }
+
+    main  img.effect04 {
+        display: block;
+        position: absolute;
+        top: 800px;
+        right: 0;
+        z-index: -1;
+        transform: rotate(144deg) translateY(-500px);
+        width: 800px;
+    }
+
+    main  img.effect05 {
+        display: block;
+        position: absolute;
+        top: 800px;
+        right: 0;
+        z-index: -1;
+        transform: rotate(144deg) translateY(-735px) translateX(300px);
+        width: 800px;
+        opacity: 0.6;
+        z-index: -2;
+    }
+
+    main  img.effect06 {
+        display: block;
+        position: absolute;
+        bottom: 1380px;
+        right: 0;
+        z-index: -1;
+        transform: rotate(144deg) translateY(-735px) translateX(300px);
+        width: 800px;
+        opacity: 0.6;
+        z-index: -2;
+    }
+
+    main  img.effect07 {
+        display: block;
+        position: absolute;
+        bottom: 1380px;
+        right: 0;
+        z-index: -1;
+        transform: rotate(144deg) translateY(-735px) translateX(300px);
+        width: 800px;
+        opacity: 0.6;
+        z-index: -2;
     }
 }

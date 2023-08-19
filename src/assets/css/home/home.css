@@ -60,7 +60,7 @@ body{
     position: relative;
     padding-bottom: 58px;
     min-height: 100vh;
-    background-image: url("../../img/chamaviva/background-01.png");
+    background-image: url("../../img/chamaviva/background_01.png");
 }
 
 header
@@ -148,7 +148,7 @@ header .menu nav ul li a i
 main
 {
     position: relative;
-    padding: 128px  0 40px 0;
+    padding: 25px 0 40px 0;
 }
 
 main section
@@ -729,7 +729,37 @@ main .voltar a i
     {
         transform: translateY(0px);
     }
+
 }
+
+    main section#culto img.effect02
+    {
+        display: none;
+    }
+    main section#inicio img.effect01
+    {
+        display: none;
+    }
+    main  img.effect03 {
+        display: none;
+    }
+
+    main  img.effect04 {
+        display: none;
+    }
+
+    main  img.effect05 {
+        display: none;
+    }
+
+    main  img.effect06 {
+        display: none;
+    }
+
+    main  img.effect07 {
+        display: none;
+    }
+
 
 
 
