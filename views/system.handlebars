@@ -1,0 +1,27 @@
+<main>
+    <form>
+        <div class="user input">
+            <label for="user">Usuário</label>
+            <input type="text" name="user" id="user">
+        </div>
+        <div class="pass input">
+            <label for="pass">Senha</label>
+            <input type="password" name="pass" id="pass" >
+        </div>
+        <div class="check">
+            <label for="showpass">Mostrar senha</label>
+            <input type="checkbox" name="showpass" id="showpass">
+        </div>
+        <div class="submit">
+            <input type="submit" value="Login" >
+        </div>
+
+        {{!-- {{#if error}} --}}
+            <div class="erros">
+                {{!-- <span>{{error}}</span> --}}
+                <span id="error-message"></span>
+            </div>
+        {{!-- {{/if}} --}}
+        
+    </form>
+</main>
