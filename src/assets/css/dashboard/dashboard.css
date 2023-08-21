@@ -79,11 +79,6 @@ body main .vendas
     padding: 4px 5px;
 }
 
-body main .vendas .clientes .cliente
-{
-    /* position: relative; */
-}
-
 body main .vendas .clientes .cliente span
 {
     font-family: var(--font-01);
