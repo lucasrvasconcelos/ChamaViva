@@ -57,7 +57,6 @@ export default class UserControler {
                 return res.json({error: "Credênciais inválidas"})
             }
           } catch (error) {
-            console.log(error)
             return res.json({error: "Erro no servidor, consultar suporte"})
           }
     }

@@ -2,12 +2,12 @@ import session from 'express-session';
 
 async function mysession (req, res, next) {
     if(req.session.user){
-        
+        next()
     }else{
-        // res.redirect("/new")
+        res.redirect("/new")
     }
 
-    next()
+    
 }
 
 export default mysession;
