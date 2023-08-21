@@ -7,8 +7,8 @@ const sequelize = new Sequelize('systeam', 'root', 'crt123456', {
     dialect: 'mysql'
   });
 
-(async () => {
-await sequelize.sync({alter: true});
-})();
+// (async () => {
+// await sequelize.sync({alter: true});
+// })();
 
 export default sequelize;
