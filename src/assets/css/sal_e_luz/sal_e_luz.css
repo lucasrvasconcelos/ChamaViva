@@ -1,0 +1,345 @@
+@font-face {
+    font-family: "Retrim";
+    src: url(".././fonts/Retrim\ Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "Kitchen";
+    src: url(".././fonts/Kitchen\ Bold.otf");
+  }
+
+  @font-face {
+    font-family: "RONORGERIONDEMO";
+    src: url(".././fonts/RONORGERIONDEMO-Regular.otf");
+  }
+ 
+  @font-face {
+    font-family: "Mantilda";
+    src: url(".././fonts/Mantilda\ _\ Briant.otf");
+  }
+
+  @font-face {
+    font-family: "Lemon";
+    src: url(".././fonts/LEMONMILK-Bold.otf");
+  }
+
+  @font-face {
+    font-family: "Edo";
+    src: url(".././fonts/edosz.ttf");
+  }
+
+:root
+{
+    --color-01:#2b7f66;
+    --color-02:#ff6d00;
+    --color-03:#ffae00;
+    --color-04:#f5f5f6;
+    --color-05:#D962A3;
+    --color-06:white;
+    --color-07:black;
+
+    --font-01: "Retrim";
+    --font-02: "Kitchen";
+    --font-03: "RONORGERIONDEMO";
+    --font-04: "Mantilda";
+    --font-05: "Lemon";
+    --font-06: "Edo";
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    position: relative;
+    background-color: var(--color-04);
+}
+
+body section
+{
+    position: relative;
+}
+
+body section#inicial
+{
+    padding-top: 200px;
+    padding-bottom: 50px;
+    min-height: 320px;
+    overflow: hidden;
+}
+
+body section#inicial .inicial
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 55px;
+}
+
+body section#inicial .inicial .titulo_evento
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+
+    position: relative;
+}
+
+body section#inicial .inicial .titulo_evento .titulo
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 44px;
+}
+
+
+body section#inicial .inicial .titulo_evento .titulo h1
+{
+    font-family: var(--font-06);
+    font-size: 115px;
+    font-weight: normal;
+}
+
+/* Sal e LUZ LOGO */
+body section#inicial .inicial .titulo_evento .titulo h1:nth-child(1)
+{
+    color: var(--color-01);
+}
+
+body section#inicial .titulo_evento .titulo h1:nth-child(2)
+{
+    color: var(--color-01);
+    font-size: 26px;
+    transform: translate(-8px, 11px);
+    font-family: var(--font-05);
+    font-weight: normal;
+}
+
+body section#inicial .inicial .titulo_evento .titulo h1:nth-child(3)
+{
+    color: var(--color-02);
+    transform: translate(35px, 0px);
+}
+
+body section#inicial .inicial .titulo_evento .image_evento img
+{
+    position: absolute;
+    width: 80px;
+    
+}
+
+body section#inicial .inicial .titulo_evento .image_evento img:nth-child(1)
+{ 
+    
+    top: -74px;
+    right: -59px;
+}
+
+body section#inicial .inicial .titulo_evento .image_evento span
+{
+    position: absolute;
+}
+
+
+body section#inicial .inicial .titulo_evento .image_evento img:nth-child(2)
+{ 
+    bottom: -40px;
+    left: -60px;
+}
+
+body section#inicial .inicial .evento_descricao
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 320px;
+    flex-direction: column;
+    gap: 105px;
+    padding-top: 55px;
+}
+
+body section#inicial .inicial .evento_descricao .dias
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    transform: rotateZ(354deg);
+}
+
+body section#inicial .inicial .evento_descricao .dias h1
+{
+    font-family: var(--font-06);
+    font-size: 55px;
+    color: var(--color-01);
+    font-weight: normal;
+}
+
+body section#inicial .inicial .evento_descricao .dias img
+{
+    position: absolute;
+    max-width: 320px;
+    z-index: -1;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+body section#inicial .inicial .evento_descricao p
+{
+    font-family: var(--font-05);
+    font-size: 14px;
+}
+
+/* SHOP SHOP SHOP SHOP SHOP SHOP SHOP */
+
+body section#shop
+{
+    padding-top: 80px;
+    overflow: hidden;
+    position: relative;
+}
+
+body section#shop .shop
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body section#shop .shop .shop_imagem 
+{
+    width: 400px;
+    height: 500px;
+    perspective: 1000px;
+    position: relative;
+    transform: translateX(60px);
+    
+}
+
+body section#shop .shop .shop_imagem .flip{
+    position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+    transition: all .5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body section#shop .shop .shop_imagem .flip{
+	transform: rotateY(0deg);
+}
+
+body section#shop .shop .shop_imagem .flip .front{
+	transform: rotateY(360deg);
+}
+
+body section#shop .shop .shop_imagem .flip .left{
+	transform: rotateY(-90deg);
+}
+
+body section#shop .shop .shop_imagem .flip .back{
+	transform: rotateY(-180deg);
+}
+
+body section#shop .shop .shop_imagem .flip .right{
+	transform: rotateY(-270deg);
+}
+
+
+body section#shop .shop .shop_imagem .flip > div
+{
+    position: absolute;
+	width: 100%;
+	height: 100%;
+    backface-visibility: hidden;
+}
+
+body section#shop .shop .shop_imagem .flip div img
+{
+    width: 100%;
+	height: 100%;
+    object-fit: cover;
+
+}
+
+body section#shop .shop .options_shop
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 57px;
+    left: -10px;
+    gap: 20px;
+    background-color: var(--color-04);
+    padding: 4px;
+    border-radius: 4px;
+    border: 0.2px solid rgba(0, 0, 0, 0.292);
+}
+
+body section#shop .shop .options_shop label i
+{
+    font-size: 25px
+}
+
+
+
+
+
+
+
+
+
+body section .background_2023
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    opacity: 0.2;
+    z-index: -999;
+    transition: all .3s ease-in-out;
+    user-select: none;
+    transform: translateX(-5px) rotate(-5deg);
+}
+
+
+
+body section .background_2023 span
+{
+
+    font-family: var(--font-06);
+    font-size: 30px;
+    font-weight: 800;
+    -webkit-text-stroke: 0.2px var(--color-01);
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0 0px var(--color-01);
+    letter-spacing: 2px;
+}
+
+
