@@ -41,3 +41,6 @@ function setImage(image){
     image == "right" ? flip.style.transform = "rotateY(270deg)": console.log("Left X");
 
 }
+
+
+

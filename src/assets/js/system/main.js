@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const user = document.querySelector("#user").value
       const pass = document.querySelector("#pass").value
 
-      const formData = { user, pass}
+      const formData = { user, pass }
 
       console.log(formData)
       try {

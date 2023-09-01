@@ -1,5 +1,6 @@
 import dados from "../databaseFAKE/dados.js"
 import User from "../models/User.js"
+import Pedidos from "../class/Pedido.js"
 
 export default class UserControler {
 
@@ -20,8 +21,6 @@ export default class UserControler {
     }
 
     async login(req, res) {
-
-        console.log(req.body)
 
 
         const user = req.body.user
@@ -45,11 +44,7 @@ export default class UserControler {
 
             if(userFind) {
 
-                
-
                 req.session.user = userFind.id
-
-                console.log(req.session.user)
 
                 return res.json({ success: true })
 
@@ -67,6 +62,13 @@ export default class UserControler {
 
     async vendas(req, res) {
         res.render("vendas", { layout: 'dashboard' } )
+    }
+
+    async sendForm(req, res) {
+
+        const pedido = new Pedidos;
+
+        pedido.createPedido(req, res)
     }
 }
 

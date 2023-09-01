@@ -57,11 +57,13 @@ body
 {
     position: relative;
     background-color: var(--color-04);
+    
 }
 
 body section
 {
     position: relative;
+    padding-bottom: 35px;
 }
 
 body section#inicial
@@ -130,6 +132,13 @@ body section#inicial .inicial .titulo_evento .titulo h1:nth-child(3)
     transform: translate(35px, 0px);
 }
 
+body section#inicial .inicial .titulo_evento .titulo h1:nth-child(4)
+{
+    color: var(--color-02);
+    transform: translate(65px, 40px);
+    font-size: 50px;
+}
+
 body section#inicial .inicial .titulo_evento .image_evento img
 {
     position: absolute;
@@ -163,7 +172,7 @@ body section#inicial .inicial .evento_descricao
     justify-content: center;
     max-width: 320px;
     flex-direction: column;
-    gap: 105px;
+    gap: 130px;
     padding-top: 55px;
 }
 
@@ -199,7 +208,8 @@ body section#inicial .inicial .evento_descricao .dias img
 body section#inicial .inicial .evento_descricao p
 {
     font-family: var(--font-05);
-    font-size: 14px;
+    font-size: 16px;
+    width: 225px;
 }
 
 /* SHOP SHOP SHOP SHOP SHOP SHOP SHOP */
@@ -217,6 +227,7 @@ body section#shop .shop
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 80px;
 }
 
 body section#shop .shop .shop_imagem 
@@ -298,10 +309,65 @@ body section#shop .shop .options_shop label i
     font-size: 25px;
 }
 
+body section#shop .shop .comprar
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 25px;
+    gap: 15px;
+}
 
+body section#shop .shop .comprar .titulo_compra h1
+{
+    font-family: var(--font-05);
+    color: var(--color-01);
+    font-weight: 900;
+    font-size: 35px;
+    transform: rotate(-5deg);
+}
 
+body section#shop .shop .comprar .detalhes_compra
+{
+    margin-top: 25px;
+}
 
+body section#shop .shop .comprar .detalhes_compra p
+{
+    font-family: var(--font-06);
+    font-size: 14px;
+    color: black;
+}
 
+body section#shop .shop .comprar .link_form 
+{
+    margin-top: 20px;
+}
+
+body section#shop .shop .comprar .link_form a
+{
+    color: var(--color-06);
+    background-color: var(--color-02);
+    padding: 8px 15px;
+    font-size: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: var(--font-06);
+    text-transform: lowercase;
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+body section#shop .shop .comprar .link_form a:hover
+{
+    color: var(--color-02);
+    background-color: var(--color-06);
+    box-shadow: 8px 8px 0px var(--color-03),
+                -8px -8px 0px var(--color-03);
+    border: 0.5px solid var(--color-02);
+}
 
 
 
