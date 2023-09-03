@@ -28,15 +28,27 @@ class Client {
     // }
 
     async getClient(nome, cpf, contato){
-        const clientFind = await Clientes.findOne({ where: { cliente_cpf: cpf, cliente_contato_01: contato } });
 
+        return await Clientes.findOne({ where: { cliente_cpf: cpf, cliente_contato_01: contato } });
+    }
+
+    async createClient(nome, cpf, contato){
         
+        try{
+            const clientess = await Clientes.create({
+                cliente_nome: nome,
+                cliente_contato_01: contato,
+                cliente_cpf: cpf
+            }, {
+                fields: ['cliente_nome', 'cliente_contato_01', 'cliente_cpf']
+            })
 
-        if(clientFind){
-            return clientFind
-        } else {
-            return false
+        } catch(Erros){
+            return console.log("Erro na criação do cliente - ClassClient.js")
+        } finally{
+            return await Clientes.findOne({ where: { cliente_cpf: cpf, cliente_contato_01: contato } });
         }
+        
     }
 }
 

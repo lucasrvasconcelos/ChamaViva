@@ -1,14 +1,22 @@
 import sequelize from "./db.js"
 import { DataTypes } from 'sequelize';
 
+import ItensPedidos from "./ItensPedido.js";
+
 const Pedidos = sequelize.define("Pedidos", {
-    id:{
-        DataTypes: NUMBER,
+    idClient:{
+        type: DataTypes.INTEGER,
         allowNull: false
     },
-    Produtos_valor: DataTypes.FLOAT
+    valorTotal: DataTypes.FLOAT
 }, {
     timestamps: false
 })
 
-export default Produtos;
+Pedidos.hasOne(ItensPedidos, {
+  foreignKey: {
+    name: 'idPedido'
+  }
+})
+
+export default Pedidos;

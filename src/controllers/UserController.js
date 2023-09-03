@@ -1,6 +1,6 @@
 import dados from "../databaseFAKE/dados.js"
 import User from "../models/User.js"
-import Pedidos from "../class/Pedido.js"
+import Pedidos from "../class/ClassPedido.js"
 
 export default class UserControler {
 
