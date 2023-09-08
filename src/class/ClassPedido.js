@@ -1,64 +1,101 @@
 import Client from "./ClassCliente.js";
+import Produtos from "../models/Products.js";
 import Pedidos from "../models/Pedidos.js"; 
+import ItensPedidos from "../models/ItensPedido.js";
+
+import sequelize from "sequelize";
 
 class ClassPedido{
 
     async createPedido(req, res){
+      const t = await sequelize.transaction();
+
         try {
-            // Consultar o banco de dados para verificar o usuário
+            
+
+
             const nome = req.body.nome;
             const contato = req.body.contato;
             const cpf = req.body.cpf;
 
-            const idProduto = req.query.idProduto;
-            const tamanhoProduto = req.query.TamProduto;
+            const idProduto = req.body.idProduto;
+            const qtdProduto = req.body.qtd;
+            const formaPagamento = req.body.fpag;
 
-            const pagamento = req.query.pedFormpagamento;
+            if(!nome || !contato || !cpf || !idProduto || !qtdProduto || !formaPagamento){
+              return res.json({msg: "Necessário informar todos os campos"})
+            }
+
+            const produtoDados = await Produtos.findOne({ where: { id: idProduto} });
+            const valorProduto = Number.parseFloat(produtoDados.Produtos_valor || 0) 
+            const valorTotal = valorProduto * qtdProduto
+
+            const dadosPedido = {
+              idProduto,
+              qtdProduto,
+              formaPagamento,
+              valorUni: valorProduto,
+              valorTotal
+            }
 
             const cliente = new Client;
-            const verifyClient = await cliente.getClient(nome, cpf, contato);
+            let verifyClient = await cliente.getClient(cpf);
 
             if(!verifyClient) {
-                
-                const criarUsuario = await cliente.createClient(nome, cpf, contato)
 
-                this.setPedido(await criarUsuario.id)
-
-                return res.json({ msg: "Vou cadastrar você" })
-
+                verifyClient = await cliente.createClient(nome, cpf, contato)
+                console.log(verifyClient.id)
+                console.log("Você não possuia cadastro, mas agora foi feito :)")
             } 
 
-            this.setPedido(await verifyClient.id)
+             this.setPedido(verifyClient.id, dadosPedido)
 
-            return res.json({ msg: "Você está cadastrado, vou inserir seu pedido"})
+
+            await t.commit();
+
+
+            return res.json({ msg: "Seu pedido será registrado"})
             
           } catch (error) {
-            console.log(error)
+
+            await t.rollback();
+
             return res.json({error: "Erro no servidor, consultar suporte"})
    
           }
        
     }
 
-    async setPedido(idCLient){
+    async setPedido(idCLient, dadosPedido){
 
       try{
 
-        // const checkPedidoUser = await Pedidos.findOne({ where: { idClient: idCLient } });
           const createPedido = await Pedidos.create({
             idClient: idCLient,
-            valorTotal: 85
+            valorTotal: dadosPedido.valorTotal
         }, {
             fields: ['idClient', 'valorTotal']
         })
 
-          // const updatePedido = await Pedidos.update({ valorTotal: 159 }, {
-          //   where: {
-          //     idClient: idCLient
-          //   }
+
+          const ItendsDoPedido = await ItensPedidos.create({
+            idPedido: createPedido.id,
+            IdProduto: dadosPedido.idProduto,
+            ipdQuantidade: dadosPedido.qtdProduto,
+            ipdValor: dadosPedido.valorUni
+          }, {
+            fields: ['idPedido', 'IdProduto', 'ipdQuantidade', 'ipdValor']
+          })
+
 
     } catch(Erros){
+
+        console.log("Erro na insersção do seu pedido")
         return console.log(Erros)
+
+    } finally{
+
+        console.log("Pedido Registrado com sucesso")
     }
   }
 }

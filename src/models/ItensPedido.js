@@ -10,14 +10,6 @@ const ItensPedidos = sequelize.define("ItensPedidos", {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    IdCor:{
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
-    IdTamanho:{
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
     ipdQuantidade:{
         type: DataTypes.FLOAT,
         allowNull: false
