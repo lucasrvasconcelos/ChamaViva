@@ -309,14 +309,17 @@ body section#shop .shop .options_shop label i
     font-size: 25px;
 }
 
-body section#shop .shop .comprar
+body section#shop .shop .comprar 
 {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 25px;
-    gap: 15px;
+    padding: 25px 8px;
+    border: 0.5px solid rgb(95, 95, 95);
+    background-color: transparent;
+    border-radius: 8px;
+    background-color: white;
 }
 
 body section#shop .shop .comprar .titulo_compra h1
@@ -340,7 +343,112 @@ body section#shop .shop .comprar .detalhes_compra p
     color: black;
 }
 
-body section#shop .shop .comprar .link_form 
+body section#shop .shop .comprar form
+{
+    position: relative;
+    height: 200px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+body section#shop .shop .comprar form > div
+{
+    position: relative;
+    display: none;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+body section#shop .shop .comprar form > div.active-form
+{
+    display: flex;
+}
+
+
+body section#shop .shop .comprar form > div label
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    font-family: var(--font-06);
+}
+body section#shop .shop .comprar form > div label input
+{
+    padding: 5px 10px;
+    border: 0.5px solid rgba(0, 0, 0, 0.776);
+    border-radius: 8px;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+}
+ 
+body section#shop .shop .comprar form > div label select
+{
+    padding: 5px 15px;
+    font-size: 18px;
+    font-family: var(--font-05);
+    border: 0.5px solid rgba(0, 0, 0, 0.331);
+}
+
+body section#shop .shop .comprar form > .produto 
+{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    display: none;
+    padding-top: 45px;
+}
+
+body section#shop .shop .comprar form > .produto label input
+{
+    width: 100px;
+}
+
+body section#shop .shop .comprar form > div label input::placeholder
+{
+    color: rgba(0, 0, 0, 0.271);
+    text-align: center;
+}
+
+body section#shop .shop .comprar .shop_next
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+}
+
+body section#shop .shop .comprar .shop_next button
+{
+    padding: 8px;
+    flex-grow: 1;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    color: white;
+    font-family: var(--font-05);
+    font-weight: normal;
+}
+
+body section#shop .shop .comprar .shop_next button:nth-child(1)
+{
+    background-color: var(--color-03);
+}
+
+body section#shop .shop .comprar .shop_next button:nth-child(2)
+{
+    background-color: var(--color-02);
+}
+
+/* body section#shop .shop .comprar .link_form 
 {
     margin-top: 20px;
 }
@@ -367,7 +475,7 @@ body section#shop .shop .comprar .link_form a:hover
     box-shadow: 8px 8px 0px var(--color-03),
                 -8px -8px 0px var(--color-03);
     border: 0.5px solid var(--color-02);
-}
+} */
 
 
 

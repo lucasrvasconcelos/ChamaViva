@@ -3,26 +3,25 @@ import Produtos from "../models/Products.js";
 import Pedidos from "../models/Pedidos.js"; 
 import ItensPedidos from "../models/ItensPedido.js";
 
-import sequelize from "sequelize";
+import Sequelize  from "sequelize";
 
 class ClassPedido{
 
     async createPedido(req, res){
-      const t = await sequelize.transaction();
 
         try {
             
-
-
             const nome = req.body.nome;
             const contato = req.body.contato;
             const cpf = req.body.cpf;
 
             const idProduto = req.body.idProduto;
             const qtdProduto = req.body.qtd;
+            const tamanho = req.body.tamanho
             const formaPagamento = req.body.fpag;
 
             if(!nome || !contato || !cpf || !idProduto || !qtdProduto || !formaPagamento){
+              console.log(`Nome:${nome} Contato: ${contato} CPF: ${cpf} idproduto: ${idProduto} Quantidade: ${qtdProduto} Pagamento: ${formaPagamento}`)
               return res.json({msg: "Necessário informar todos os campos"})
             }
 
@@ -35,6 +34,7 @@ class ClassPedido{
               qtdProduto,
               formaPagamento,
               valorUni: valorProduto,
+              tamanho,
               valorTotal
             }
 
@@ -44,22 +44,16 @@ class ClassPedido{
             if(!verifyClient) {
 
                 verifyClient = await cliente.createClient(nome, cpf, contato)
-                console.log(verifyClient.id)
                 console.log("Você não possuia cadastro, mas agora foi feito :)")
             } 
 
-             this.setPedido(verifyClient.id, dadosPedido)
-
-
-            await t.commit();
-
+            this.setPedido(verifyClient.id, dadosPedido)
 
             return res.json({ msg: "Seu pedido será registrado"})
             
           } catch (error) {
 
-            await t.rollback();
-
+            console.log(error)
             return res.json({error: "Erro no servidor, consultar suporte"})
    
           }
@@ -72,9 +66,10 @@ class ClassPedido{
 
           const createPedido = await Pedidos.create({
             idClient: idCLient,
-            valorTotal: dadosPedido.valorTotal
+            valorTotal: dadosPedido.valorTotal,
+            pedObs: dadosPedido.formaPagamento
         }, {
-            fields: ['idClient', 'valorTotal']
+            fields: ['idClient', 'valorTotal', 'pedObs']
         })
 
 
@@ -82,9 +77,10 @@ class ClassPedido{
             idPedido: createPedido.id,
             IdProduto: dadosPedido.idProduto,
             ipdQuantidade: dadosPedido.qtdProduto,
-            ipdValor: dadosPedido.valorUni
+            ipdValor: dadosPedido.valorUni,
+            ipdTamanho: dadosPedido.tamanho
           }, {
-            fields: ['idPedido', 'IdProduto', 'ipdQuantidade', 'ipdValor']
+            fields: ['idPedido', 'IdProduto', 'ipdQuantidade', 'ipdTamanho','ipdValor']
           })
 
 

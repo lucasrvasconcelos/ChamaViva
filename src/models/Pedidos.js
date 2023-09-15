@@ -8,7 +8,13 @@ const Pedidos = sequelize.define("Pedidos", {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    valorTotal: DataTypes.FLOAT
+    
+    valorTotal: DataTypes.FLOAT,
+
+    pedObs:{
+      type: DataTypes.STRING,
+      allowNull: false
+  }
 }, {
     timestamps: false
 })

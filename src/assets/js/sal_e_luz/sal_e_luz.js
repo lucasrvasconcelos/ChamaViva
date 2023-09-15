@@ -42,5 +42,37 @@ function setImage(image){
 
 }
 
+const dadosForm = document.querySelectorAll(".comprar form div")
+const backButton = document.querySelector(".comprar .shop_next #left")
+const nextButton = document.querySelector(".comprar .shop_next #right")
 
+backButton.style.display = 'none'
 
+console.log(dadosForm.length)
+let indexPag = 0
+
+nextButton.addEventListener('click', () => {
+    if (indexPag < dadosForm.length - 1){
+        dadosForm[indexPag].classList.remove("active-form")
+        indexPag++
+        dadosForm[indexPag].classList.add("active-form")
+    }
+
+    showButton(indexPag)
+})
+
+backButton.addEventListener('click', () => {
+    if(indexPag > 0){
+        dadosForm[indexPag].classList.remove("active-form")
+        indexPag--
+        dadosForm[indexPag].classList.add("active-form")
+    }
+
+    showButton(indexPag)
+})
+
+function showButton(indexPag){
+
+    indexPag > 0 ? backButton.style.display = 'block' : backButton.style.display = 'none';
+    indexPag == dadosForm.length -1 ? nextButton.style.display = 'none' : nextButton.style.display = 'block'
+}
