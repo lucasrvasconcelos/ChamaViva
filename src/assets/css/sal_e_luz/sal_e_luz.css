@@ -28,6 +28,14 @@
     src: url(".././fonts/edosz.ttf");
   }
 
+  @font-face {
+    font-family: "Staatliches";
+    src: url(".././fonts/Staatliches-Regular.ttf");
+  }
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 :root
 {
     --color-01:#2b7f66;
@@ -44,6 +52,7 @@
     --font-04: "Mantilda";
     --font-05: "Lemon";
     --font-06: "Edo";
+    --font-07: "Staatliches";
 }
 
 *
@@ -476,6 +485,134 @@ body section#shop .shop .comprar .link_form a:hover
                 -8px -8px 0px var(--color-03);
     border: 0.5px solid var(--color-02);
 } */
+
+body section#more .more
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color-01);
+
+    width: 100%;
+    padding: 50px 0;
+    z-index: 999;
+}
+
+body section#more .more .event_image
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+}
+
+body section#more .more .event_image > img
+{
+    width: 115px;
+    position: absolute;
+    top: -36px;
+    left: -10px;
+    transform: rotateZ(-22deg);
+    z-index: 1;
+}
+
+
+
+body section#more .more .event_image .image-content
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    /* gap: 15px; */
+}
+
+
+body section#more .more .event_image .image-content .image
+{
+    position: relative;
+    overflow: hidden;
+    width: 91px;
+    height: 169px;
+    background-color: var(--color-04);
+    /* transform: translateX(-49px); */
+}
+
+body section#more .more .event_image .image-content .image img
+{
+    width: 200px;
+    position: absolute;
+    top: -31px;
+    left: -10px;
+    user-select: none;
+}
+
+body section#more .more .event_image .image-content h1
+{
+    transform: rotateZ(90deg) scale(3.1);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    font-size: 19px;
+    font-family: var(--font-07);
+    color: var(--color-04);
+    z-index: 10;
+
+}
+
+body section#more .more .event_image p.p_01
+{
+    font-size: 12px;
+    font-family: var(--font-07);
+    color: var(--color-04);
+    transform: translateX(27px);
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+body section#more .more .event_image p.p_02
+{
+    font-size: 12px;
+    font-family: var(--font-07);
+    color: var(--color-04);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform:rotateZ(90deg) translateX(56px) translateY(-26.5px);
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+body section#more .more .event_image p.p_03
+{
+    font-size: 12px;
+    font-family: var(--font-07);
+    color: var(--color-04);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: normal;
+    transform: rotateZ(-90deg) translateX(82px) translateY(-36.5px);
+    letter-spacing: 0.5px;
+}
+
+body section#more .more .event_image span
+{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 15px;
+    background-color: var(--color-02);
+    color: var(--color-04);
+    font-family: var(--font-07);
+    font-weight: 100;
+    width: 92%;
+    letter-spacing: 1px;
+}
+
+
 
 
 
