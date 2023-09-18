@@ -612,6 +612,179 @@ body section#more .more .event_image span
     letter-spacing: 1px;
 }
 
+body section#programacao
+{
+    position: relative;
+}
+
+body section#programacao .programacao
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    gap: 35px;
+    
+}
+
+body section#programacao .programacao .programacao-title h1
+{
+    font-family: var(--font-05);
+    text-align: center;
+    font-size: 30px;
+    color: var(--color-06);
+    letter-spacing: 2px;
+    background-color: transparent;
+    padding: 4px 10px;
+    border-radius: 4px;
+    position: relative;
+    display: block;
+    background-color: var(--color-02);
+    overflow: hidden;
+}
+
+body section#programacao .programacao .programacao-title h1:after
+{
+    content: '09,10 e 11 NOV';
+    background-color: #2b7f66;
+    position: absolute;
+    top: -110%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+    animation: programacaoH1 3s cubic-bezier(0.445, 0.05, 0.55, 1.3) infinite alternate;
+}
+
+@keyframes programacaoH1 {
+    from{
+        top: 0;
+    }
+}
+
+body section#programacao .programacao .programacao-conteudo
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    
+}
+
+body section#programacao .programacao .programacao-conteudo .programacao-itens
+{
+    width: 320px;
+    position: relative;
+    padding: 15px 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #f3eddd;
+    border-radius: 4px;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.556);
+    border: 0.5px solid rgba(0, 0, 0, 0.189);
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 2.275);
+}
+
+body section#programacao .programacao .programacao-conteudo .programacao-itens:hover
+{
+    box-shadow: 7px 7px 0px rgba(0, 0, 0, 0.556);
+    transform: translateX(-2px) translateY(-2px);
+}
+
+body section#programacao .programacao .programacao-conteudo .programacao-itens .programacao-item 
+{
+    width: 100%;
+}
+
+
+body section#programacao .programacao .programacao-conteudo .programacao-itens .programacao-item > span
+
+{
+    font-family: var(--font-07);
+    font-size: 18px;
+    border-bottom: 0.5px solid black;
+}
+
+body section#programacao .programacao .programacao-conteudo .programacao-itens .programacao-item .programacao-detalhes
+{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+body section#programacao .programacao .programacao-conteudo .programacao-itens .programacao-item .programacao-detalhes .item
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-left: 5px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.254);
+    
+}
+
+body section#programacao .programacao .programacao-conteudo .programacao-itens .programacao-item .programacao-detalhes .item:hover i
+{
+    color: var(--color-02);
+}
+
+body section#programacao .programacao .programacao-conteudo .programacao-itens .programacao-item .programacao-detalhes .item i
+{
+    font-size: 30px;
+    color: var(--color-01);
+    transform: rotate(-7deg);
+}
+
+body section#programacao .programacao .programacao-conteudo .programacao-itens .programacao-item .programacao-detalhes .item span
+{
+    font-family: var(--font-07);
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+body section#programacao .programacao .programacao-conteudo .programacao-imagens
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+body section#programacao .programacao .programacao-conteudo .programacao-imagens img:nth-child(1)
+{
+    transform: translateX(-38px) translateY(10px);
+}
+
+body section#programacao .programacao .programacao-conteudo .programacao-imagens img:nth-child(2)
+{
+    transform: translateX(81px) translateY(-70px);
+    height: 400px;
+}
+
+
+
+
+
+
+
 
 
 
