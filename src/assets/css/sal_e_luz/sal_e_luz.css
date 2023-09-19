@@ -771,19 +771,162 @@ body section#programacao .programacao .programacao-conteudo .programacao-imagens
 body section#programacao .programacao .programacao-conteudo .programacao-imagens img:nth-child(1)
 {
     transform: translateX(-38px) translateY(10px);
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+
+body section#programacao .programacao .programacao-conteudo .programacao-imagens img:nth-child(1):hover
+{
+    transform: translateX(-36px) translateY(10px);
+    
 }
 
 body section#programacao .programacao .programacao-conteudo .programacao-imagens img:nth-child(2)
 {
     transform: translateX(81px) translateY(-70px);
+    transition: all .3s ease-in-out;
     height: 400px;
+}
+
+body section#programacao .programacao .programacao-conteudo .programacao-imagens img:nth-child(2):hover
+{
+    transform: translateX(79px) translateY(-70px);
+}
+
+body section#programacao .programacao .programacao-conteudo .programacao-imagens > span:nth-child(3)
+{
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    max-width: 135px;
+    font-family: var(--font-05);
+    transform: translateX(100px) translateY(258px);
+    letter-spacing: 2px;
+    background-color: var(--color-03);
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: var(--color-07);
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    user-select: none;
+    text-align: right;
 }
 
 
 
 
+body section#programacao .programacao .programacao-conteudo .programacao-imagens > span:nth-child(4)
+{
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+    max-width: 155px;
+    font-family: var(--font-05);
+    transform: translateX(-75px) translateY(-120px);
+    letter-spacing: 2px;
+    background-color: var(--color-02);
+    color: var(--color-06);
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    user-select: none;
+    text-align: center;
+}
 
 
+body section#programacao .programacao .programacao-conteudo .programacao-imagens span:hover
+{
+    background-color: var(--color-03);
+    color: var(--color-07);
+}
+
+body section#oferta .oferta
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    overflow: hidden;
+}
+
+body section#oferta .oferta .titulo-oferta
+{
+    position: relative;
+}
+
+body section#oferta .oferta .titulo-oferta .titulo h1
+{
+    font-size: 85px;
+    line-height: 80px;
+    font-family: var(--font-05);
+    color: var(--color-01);
+    text-shadow: 4px 0px 0px var(--color-04),
+                 6px 0px 0px var(--color-01);
+}
+
+body section#oferta .oferta .titulo-oferta span
+{
+    font-size: 48px;
+    font-family: var(--font-04);
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(205px);
+}
+
+body section#oferta .oferta .qrcode
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 10px 0;
+    position: relative;
+
+}
+
+body section#oferta .oferta .qrcode .qrcode-img img
+{
+    max-width: 320px;
+    object-fit: cover;
+}
+
+body section#oferta .oferta .qrcode .chave
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+body section#oferta .oferta .qrcode .chave h1
+{
+    font-family: var(--font-06);
+    text-align: center;
+}
+
+body section#oferta .oferta .qrcode .chave span
+{
+    font-family: var(--font-07);
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+body section#oferta .oferta .qrcode .images img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateX(-158px) translateY(-100px);
+
+}
 
 
 
@@ -814,7 +957,7 @@ body section .background_2023
 
 
 
-body section .background_2023 span
+body section .background_2023 > span
 {
 
     font-family: var(--font-06);
