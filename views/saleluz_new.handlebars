@@ -1,266 +1,268 @@
-<section id="inicial">
-    <div class="inicial">
+<main>
+    <section id="inicial">
+        <div class="inicial">
 
-        <div class="titulo_evento headline">
-            <div class="titulo">
-                <h1>SAL</h1>
-                <h1>&</h1>
-                <h1>LUZ</h1>
-                <h1>2023</h1>
-            </div>
-            <div class="image_evento">
+            <div class="titulo_evento headline">
+                <div class="titulo">
+                    <h1>SAL</h1>
+                    <h1>&</h1>
+                    <h1>LUZ</h1>
+                    <h1>2023</h1>
+                </div>
+                <div class="image_evento">
 
-                <img src="img/SAL_E_LUZ/Icons/lampada_01.svg" alt="Lâmpada">
-                <img src="img/SAL_E_LUZ/Icons/lampada_02.svg" alt="Lâmpada">
+                    <img src="img/SAL_E_LUZ/Icons/lampada_01.svg" alt="Lâmpada">
+                    <img src="img/SAL_E_LUZ/Icons/lampada_02.svg" alt="Lâmpada">
+                </div>
             </div>
+
+            <div class="evento_descricao headline">
+                <!-- Aqui começa a descrição do evento -->
+                <div class="dias">
+                    <h1>9,10 E 11 DE</h1>
+                    <h1>NOVEMBRO</h1>
+                    <img src="img/SAL_E_LUZ/Icons/circle_01.svg" alt="Circulo">
+                </div>
+                <p>Estamos muito animados em convidá-los para nosso evento Sal e Luz</p>
+            </div>
+
+            {{!-- <img src="img/SAL_E_LUZ/Icons/tinta_01.svg" alt=""> --}}
+        </div>
+        <div class="background_2023" />
+
+    </section>
+
+    <section id="shop">
+        <div class="shop">
+            <div class="shop_imagem headline">
+                <div class="flip">
+                    <div class="front">
+                        <img src="img/SAL_E_LUZ/BLUSA_03.png" />
+                    </div>
+                    <div class="left">
+                        <img src="img/SAL_E_LUZ/BLUSA_03.png" />
+                    </div>
+                    
+                    <div class="back">
+                        <img src="img/SAL_E_LUZ/BLUSA_03.png" />
+                    </div>
+
+                    <div class="right">
+                        <img src="img/SAL_E_LUZ/BLUSA_03.png" />
+                    </div>
+                </div>
+
+                <div class="options_shop headline">
+                    <label for="front"> <i class="ph ph-arrow-up"></i>
+                        <input type="radio" name="radio" id="front" checked="true">
+                    </label>
+                    
+                    <label for="left"> <i class="ph ph-arrow-left"></i>
+                        <input type="radio" name="radio" id="left">
+                    </label>
+
+                    <label for="back"> <i class="ph ph-arrow-down"></i>
+                        <input type="radio" name="radio" id="back">
+                    </label>
+
+                    <label for="right"> <i class="ph ph-arrow-right"></i>
+                        <input type="radio" name="radio" id="right">
+                    </label>
+                </div>
+
+            </div>
+            
+            <div class="comprar">
+                <div class="titulo_compra headline">
+                    <h1>ADQUIRA</h1>
+                    <h1>JÁ A SUA!</h1>
+                </div>
+                <div class="detalhes_compra headline">
+                    <p>Tamanhos/Preços/Formas de pagamento </p>
+                    <p>35,00 R$</p>
+                </div>
+                {{!-- <div class="link_form">
+                    <a target="_blank" href="https://docs.google.com/forms/d/1l4J_Al1huE4JS7H9f26OiLDei9ZSTl3KRdQ_BL3zMH4/viewform?edit_requested=true">CLique aqui</a>
+                </div> --}}
+
+                <form action="/sendform" method="post" class="headline">
+                    <div class="cpf active-form">
+                        <label for="cpf"> CPF/CNPJ
+                            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
+                        </label>
+                    </div>
+
+                    <div class="telefone">
+                        <label for="telefone"> Telefone
+                            <input type="tel" id="telefone" name="contato" placeholder="00 00000-0000">
+                        </label>
+                    </div>
+
+                    <div class="nome">
+                        <label for="nome"> Nome
+                            <input type="text" id="nome" name="nome" placeholder="digite">
+                        </label>
+                    </div>
+                    <div class="produto">
+                        <label for="">
+                            <input type="hidden" name="idProduto" id="idProduto" value="1">
+                        </label>
+                        <label for="quantidade"> Quantidade
+                            <input type="number" id="quantidade" name="qtd" value="1">
+                        </label>
+
+                        <label for="tamanho"> Tamanhos
+                            <select id="tamanhos" name="tamanho">
+                                <option value="pp">PP</option>
+                                <option value="p">P</option>
+                                <option value="g">G</option>
+                                <option value="gg">GG</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="pagamentos">
+                        <label for="fpag"> Pagamento
+                            <select name="fpag" id="fpag">
+                                <option value="pix">Pix</option>
+                                <option value="dinheiro">Dinheiro</option>
+                                <option value="cartao">Cartão</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Reservar">
+                    </div>
+                </form>
+                <div class="shop_next">
+                    <button id="left">Voltar</button>
+                    <button id="right">Próximo</button>
+                </div>
+            </div>
+
         </div>
 
-        <div class="evento_descricao headline">
-            <!-- Aqui começa a descrição do evento -->
-            <div class="dias">
-                <h1>9,10 E 11 DE</h1>
-                <h1>NOVEMBRO</h1>
-                <img src="img/SAL_E_LUZ/Icons/circle_01.svg" alt="Circulo">
+        <div class="background_2023" />
+    </section>
+
+    <section id="more">
+        <div class="more headline">
+            <div class="event_image">
+                <img src="img/SAL_E_LUZ/Icons/coroa.svg" alt="coroa">
+                <p class="p_01">O PRINCÍPIO E O FIM</p>
+                <div class="image-content">
+                    <div class="image">
+                        <img src="img/SAL_E_LUZ/Icons/lion.svg" alt="event_image">
+                    </div>
+                    <h1>ELE VEM</h1>
+                </div>
+                <p class="p_02">O PRIMEIRO E O ÚLTIMO</p>
+                <p class="p_03">EU SOU O ALFA E O ÔMEGA</p>
+                <span>Apocalipse: 22: 12 - 13</span>
             </div>
-            <p>Estamos muito animados em convidá-los para nosso evento Sal e Luz</p>
         </div>
+    </section>
 
-        {{!-- <img src="img/SAL_E_LUZ/Icons/tinta_01.svg" alt=""> --}}
-    </div>
-    <div class="background_2023" />
-
-</section>
-
-<section id="shop">
-    <div class="shop">
-        <div class="shop_imagem headline">
-            <div class="flip">
-                <div class="front">
-                    <img src="img/SAL_E_LUZ/BLUSA_03.png" />
+    <section id="programacao">
+        <div class="programacao">
+            <div class="programacao-title headline">
+                <h1>PROGRAMAÇÃO</h1>
+            </div>
+            <div class="programacao-conteudo ">
+                <div class="programacao-itens">
+                    <div class="programacao-item">
+                        <span>1° dia</span>
+                        <div class="programacao-detalhes">
+                            <div class="item headline">
+                                <i class="ph ph-arrow-bend-down-right"></i>
+                                <span>Culto Abertura</span>
+                            </div>
+                            <div class="item headline">
+                                <i class="ph ph-arrow-bend-down-right"></i>
+                                <span>Louvores</span>
+                            </div>
+                            <div class="item headline">
+                                <i class="ph ph-arrow-bend-down-right"></i>
+                                <span>Pregação</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="programacao-item">
+                        <span>2° dia</span>
+                        <div class="programacao-detalhes">
+                            <div class="item headline">
+                                <i class="ph ph-arrow-bend-down-right"></i>
+                                <span>Continuação</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="programacao-item">
+                        <span>3° dia</span>
+                        <div class="programacao-detalhes">
+                            <div class="item headline">
+                                <i class="ph ph-arrow-bend-down-right"></i>
+                                <span>Consagração</span>
+                            </div>
+                            <div class="item headline">
+                                <i class="ph ph-arrow-bend-down-right"></i>
+                                <span>Coffe Break</span>
+                            </div>
+                            <div class="item headline">
+                                <i class="ph ph-arrow-bend-down-right"></i>
+                                <span>Palestra</span>
+                            </div>
+                            <div class="item headline">
+                                <i class="ph ph-arrow-bend-down-right"></i>
+                                <span>Culto de encerramento</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="left">
-                    <img src="img/SAL_E_LUZ/BLUSA_03.png" />
-                </div>
-                
-                <div class="back">
-                    <img src="img/SAL_E_LUZ/BLUSA_03.png" />
-                </div>
+                <div class="programacao-imagens headline">
+                    <img src="img/SAL_E_LUZ/Fotos/01.png" alt="Foto evento">
+                    <img src="img/SAL_E_LUZ/Fotos/2.webp" alt="Foto evento">
+                    <span>VOCÊ NÃO PODE FICAR DE FORA!</span>
+                    <span>VENHA SE ALEGRAR CONOSCO!</span>
 
-                <div class="right">
-                    <img src="img/SAL_E_LUZ/BLUSA_03.png" />
+                    <div class="background_2023"></div>
                 </div>
             </div>
-
-            <div class="options_shop headline">
-                <label for="front"> <i class="ph ph-arrow-up"></i>
-                    <input type="radio" name="radio" id="front" checked="true">
-                </label>
-                
-                <label for="left"> <i class="ph ph-arrow-left"></i>
-                    <input type="radio" name="radio" id="left">
-                </label>
-
-                <label for="back"> <i class="ph ph-arrow-down"></i>
-                    <input type="radio" name="radio" id="back">
-                </label>
-
-                <label for="right"> <i class="ph ph-arrow-right"></i>
-                    <input type="radio" name="radio" id="right">
-                </label>
-            </div>
-
         </div>
         
-        <div class="comprar">
-            <div class="titulo_compra headline">
-                <h1>ADQUIRA</h1>
-                <h1>JÁ A SUA!</h1>
+    </section>
+
+    <section id="oferta">
+        <div class="oferta">
+            <div class="titulo-oferta">
+                <div class="titulo headline">
+                    <h1>O</h1>
+                    <h1>FER</h1>
+                    <h1>TA</h1>
+                </div>
+                <span>voluntária</span>
             </div>
-            <div class="detalhes_compra headline">
-                <p>Tamanhos/Preços/Formas de pagamento </p>
-                <p>35,00 R$</p>
-            </div>
-            {{!-- <div class="link_form">
-                <a target="_blank" href="https://docs.google.com/forms/d/1l4J_Al1huE4JS7H9f26OiLDei9ZSTl3KRdQ_BL3zMH4/viewform?edit_requested=true">CLique aqui</a>
-            </div> --}}
-
-            <form action="/sendform" method="post" class="headline">
-                <div class="cpf active-form">
-                    <label for="cpf"> CPF/CNPJ
-                        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
-                    </label>
+            <div class="qrcode headline">
+                <div class="qrcode-img">
+                <img src="img/BACKGROUND/qrcode.png" alt="qrcode">
                 </div>
-
-                <div class="telefone">
-                    <label for="telefone"> Telefone
-                        <input type="tel" id="telefone" name="contato" placeholder="00 00000-0000">
-                    </label>
+                <div class="chave">
+                    <h1>CHAVE PIX</h1>
+                    <span>saleluzadbj@gmail.com</span>
                 </div>
-
-                <div class="nome">
-                    <label for="nome"> Nome
-                        <input type="text" id="nome" name="nome" placeholder="digite">
-                    </label>
+                <div class="images">
+                    {{!-- <img src="img/SAL_E_LUZ/Effect/coins.webp" alt="coins"> --}}
                 </div>
-                <div class="produto">
-                    <label for="">
-                        <input type="hidden" name="idProduto" id="idProduto" value="1">
-                    </label>
-                    <label for="quantidade"> Quantidade
-                        <input type="number" id="quantidade" name="qtd" value="1">
-                    </label>
-
-                    <label for="tamanho"> Tamanhos
-                        <select id="tamanhos" name="tamanho">
-                            <option value="pp">PP</option>
-                            <option value="p">P</option>
-                            <option value="g">G</option>
-                            <option value="gg">GG</option>
-                        </select>
-                    </label>
-                </div>
-                <div class="pagamentos">
-                    <label for="fpag"> Pagamento
-                        <select name="fpag" id="fpag">
-                            <option value="pix">Pix</option>
-                            <option value="dinheiro">Dinheiro</option>
-                            <option value="cartao">Cartão</option>
-                            <option value="outros">Outros</option>
-                        </select>
-                    </label>
-                </div>
-                <div class="submit">
-                    <input type="submit" value="Reservar">
-                </div>
-            </form>
-            <div class="shop_next">
-                <button id="left">Voltar</button>
-                <button id="right">Próximo</button>
             </div>
         </div>
+    </section>
 
-    </div>
-
-    <div class="background_2023" />
-</section>
-
-<section id="more">
-    <div class="more headline">
-        <div class="event_image">
-            <img src="img/SAL_E_LUZ/Icons/coroa.svg" alt="coroa">
-            <p class="p_01">O PRINCÍPIO E O FIM</p>
-            <div class="image-content">
-                <div class="image">
-                    <img src="img/SAL_E_LUZ/Icons/lion.svg" alt="event_image">
-                </div>
-                <h1>ELE VEM</h1>
-            </div>
-            <p class="p_02">O PRIMEIRO E O ÚLTIMO</p>
-            <p class="p_03">EU SOU O ALFA E O ÔMEGA</p>
-            <span>Apocalipse: 22: 12 - 13</span>
-        </div>
-    </div>
-</section>
-
-<section id="programacao">
-    <div class="programacao">
-        <div class="programacao-title headline">
-            <h1>PROGRAMAÇÃO</h1>
-        </div>
-        <div class="programacao-conteudo ">
-            <div class="programacao-itens">
-                <div class="programacao-item">
-                    <span>1° dia</span>
-                    <div class="programacao-detalhes">
-                        <div class="item headline">
-                            <i class="ph ph-arrow-bend-down-right"></i>
-                            <span>Culto Abertura</span>
-                        </div>
-                        <div class="item headline">
-                            <i class="ph ph-arrow-bend-down-right"></i>
-                            <span>Louvores</span>
-                        </div>
-                        <div class="item headline">
-                            <i class="ph ph-arrow-bend-down-right"></i>
-                            <span>Pregação</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="programacao-item">
-                    <span>2° dia</span>
-                    <div class="programacao-detalhes">
-                        <div class="item headline">
-                            <i class="ph ph-arrow-bend-down-right"></i>
-                            <span>Continuação</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="programacao-item">
-                    <span>3° dia</span>
-                    <div class="programacao-detalhes">
-                        <div class="item headline">
-                            <i class="ph ph-arrow-bend-down-right"></i>
-                            <span>Consagração</span>
-                        </div>
-                        <div class="item headline">
-                            <i class="ph ph-arrow-bend-down-right"></i>
-                            <span>Coffe Break</span>
-                        </div>
-                        <div class="item headline">
-                            <i class="ph ph-arrow-bend-down-right"></i>
-                            <span>Palestra</span>
-                        </div>
-                        <div class="item headline">
-                            <i class="ph ph-arrow-bend-down-right"></i>
-                            <span>Culto de encerramento</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="programacao-imagens headline">
-                <img src="img/SAL_E_LUZ/Fotos/01.png" alt="Foto evento">
-                <img src="img/SAL_E_LUZ/Fotos/2.webp" alt="Foto evento">
-                <span>VOCÊ NÃO PODE FICAR DE FORA!</span>
-                <span>VENHA SE ALEGRAR CONOSCO!</span>
-
-                <div class="background_2023"></div>
+    <section id="mais-info">
+        <div class="mais-info headline">
+            <div class="title-info">
+                <h1>PARA SABER</h1>
+                <h1><i class="ph ph-plus"></i> INFORMAÇÕES</h1>
+                <a href="">Clique aqui</a>
             </div>
         </div>
-    </div>
-    
-</section>
-
-<section id="oferta">
-    <div class="oferta">
-        <div class="titulo-oferta">
-            <div class="titulo headline">
-                <h1>O</h1>
-                <h1>FER</h1>
-                <h1>TA</h1>
-            </div>
-            <span>voluntária</span>
-        </div>
-        <div class="qrcode headline">
-            <div class="qrcode-img">
-               <img src="img/BACKGROUND/qrcode.png" alt="qrcode">
-            </div>
-            <div class="chave">
-                <h1>CHAVE PIX</h1>
-                <span>saleluzadbj@gmail.com</span>
-            </div>
-            <div class="images">
-                {{!-- <img src="img/SAL_E_LUZ/Effect/coins.webp" alt="coins"> --}}
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="mais-info">
-    <div class="mais-info headline">
-        <div class="title-info">
-            <h1>PARA SABER</h1>
-            <h1><i class="ph ph-plus"></i> INFORMAÇÕES</h1>
-            <a href="">Clique aqui</a>
-        </div>
-    </div>
-</section>
+    </section>
+</main>

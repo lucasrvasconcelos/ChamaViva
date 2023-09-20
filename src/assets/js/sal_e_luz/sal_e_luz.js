@@ -125,3 +125,5 @@ ScrollReveal().reveal('.headline',
     // }
     scale: 0.85,
 });
+
+//SUBMIT FORM

@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const formData = { user, pass }
 
-      console.log(formData)
       try {
         const response = await fetch('/login', {
           method: 'POST',

@@ -66,13 +66,99 @@ body
 {
     position: relative;
     background-color: var(--color-04);
-
+    width: 100%;
+    height: 100%;
     
+}
+
+body .loading
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-04);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    user-select: none;
+    overflow: hidden;
+}
+
+body .loading > div
+{
+    background-color: var(--color-01);
+}
+
+
+body .loading .top
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    transform: scale(3) rotate(-14deg) translateY(-210px);
+    
+}
+
+body .loading .mid
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    animation: none;
+
+}
+
+body .loading .mid img
+{
+    width: 100px;
+    animation: LoadinAnime .2s ease-in-out infinite alternate;
+}
+
+@keyframes LoadinAnime {
+    from
+    {
+        transform: translateY(-5px);
+        opacity: 0.8;
+    }
+    to
+    {
+        opacity: 1;
+        transform: translateY(5px);
+    }
+}
+
+body .loading .bot
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 400px;
+    transform: scale(3) rotate(-14deg) translateY(210px);
+}
+
+
+body main
+{
+    display: none;
 }
 
 body header
 {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -81,7 +167,7 @@ body header
     position: fixed;
     width: 100%;
     background-color: var(--color-04);
-    z-index: 999;
+    z-index: 100;
     padding: 15px 0;
     border: 2px dashed var(--color-01);
 }
