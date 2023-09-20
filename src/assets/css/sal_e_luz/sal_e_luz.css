@@ -1104,7 +1104,7 @@ body section .background_2023
     z-index: -999;
     transition: all .3s ease-in-out;
     user-select: none;
-    transform: translateX(-5px) rotate(-5deg);
+    transform: translateX(0px) rotate(-5deg);
 }
 
 
@@ -1118,7 +1118,7 @@ body section .background_2023 > span
     -webkit-text-stroke: 0.2px var(--color-01);
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 0 0px var(--color-01);
-    letter-spacing: 2px;
+    /*  */
 }
 
 

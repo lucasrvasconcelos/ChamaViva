@@ -16,8 +16,8 @@ background.forEach((element) =>{
             index++
         } else 
         {
-            // element.textContent = ''
-            // index=0
+            element.textContent = ''
+            index=0
         }
 
         } , time)
