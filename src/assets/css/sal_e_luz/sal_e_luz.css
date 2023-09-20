@@ -70,6 +70,60 @@ body
     
 }
 
+body header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-04);
+    z-index: 999;
+    padding: 15px 0;
+    border: 2px dashed var(--color-01);
+}
+
+body header .time-date
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2px;
+    
+}
+
+body header .time-date .elements-time
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+}
+
+body header .time-date .elements-time span:nth-child(1)
+{
+    font-family: var(--font-06);
+    font-size: 22px;
+}
+
+body header .time-date .elements-time span:nth-child(2)
+{
+    background-color: var(--color-01);
+    padding: 0 5px;
+    font-family: var(--font-06);
+    color: var(--color-04);
+    font-weight: normal;
+    text-align: center;
+    width: 70px;
+}
+
+
+
 body section
 {
     position: relative;
@@ -728,16 +782,15 @@ body section#programacao .programacao .programacao-conteudo .programacao-itens
     flex-direction: column;
     gap: 15px;
     background-color: #f3eddd;
-    border-radius: 4px;
-    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.556);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.556);
     border: 0.5px solid rgba(0, 0, 0, 0.189);
-    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 2.275);
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1);
 }
 
 body section#programacao .programacao .programacao-conteudo .programacao-itens:hover
 {
-    box-shadow: 7px 7px 0px rgba(0, 0, 0, 0.556);
-    transform: translateX(-2px) translateY(-2px);
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.556);
+    transform: translateX(-4px) translateY(-4px);
 }
 
 body section#programacao .programacao .programacao-conteudo .programacao-itens .programacao-item 
@@ -890,7 +943,6 @@ body section#oferta .oferta
     overflow: hidden;
     padding: 0 0 30px 0;
     background-image: url(../../img/SAL_E_LUZ/Effect/coins.webp);
-    background-size: 200%;
     background-attachment:fixed ;
 }
 
@@ -951,6 +1003,8 @@ body section#oferta .oferta .qrcode .chave
 body section#oferta .oferta .qrcode .chave h1
 {
     font-family: var(--font-06);
+    color: var(--color-07);
+    text-shadow: 2px 2px 0px var(--color-06);
     text-align: center;
 }
 
@@ -960,8 +1014,9 @@ body section#oferta .oferta .qrcode .chave span
     margin-top: 10px;
     padding: 5px 10px;
     background-color: white;
-    font-weight: bold;
-    letter-spacing: 2px;
+    border: 0.5px dotted var(--color-07);
+    letter-spacing: 1px;
+    border-radius: 4px;
 }
 
 body section#oferta .oferta .qrcode .images img
@@ -988,6 +1043,7 @@ body section#mais-info .mais-info
     flex-direction: column;
     padding: 80px 0;
     position: relative;
+    background-image: url(../../img/SAL_E_LUZ/Fotos/3.webp);
 }
 
 body section#mais-info .mais-info .title-info
@@ -1019,25 +1075,6 @@ body section#mais-info .mais-info .title-info a:hover
 {
     background-color: var(--color-02);
 }
-
-body section#mais-info .mais-info .background_fotos
-{
-    top: 0;
-    position: absolute;
-    z-index: -1;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
-
-}
-
-body section#mais-info .mais-info .background_fotos img
-{
-    width: 100%;
-    filter: blur(2px);
-}
-
 
 
 
