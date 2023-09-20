@@ -1,7 +1,7 @@
 const background = document.querySelectorAll(".background_2023")
 
 let index = 0
-const qtd = 300
+const qtd = 600
 const text = "Sal e luz 2023"
 const time = 50
 
@@ -16,8 +16,8 @@ background.forEach((element) =>{
             index++
         } else 
         {
-            element.textContent = ''
-            index=0
+            // element.textContent = ''
+            // index=0
         }
 
         } , time)
@@ -110,3 +110,18 @@ function formateTime(x){
 }
 
 setInterval(countDate, 1000)
+
+
+ScrollReveal().reveal('.headline', 
+{ 
+    delay: 100, 
+    reset: true , 
+    duration: 2000,
+    distance: '60px',
+    origin: 'bottom',
+    // rotate: {
+    //     x: 20,
+    //     z: 20
+    // }
+    scale: 0.85,
+});
