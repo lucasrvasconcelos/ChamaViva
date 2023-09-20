@@ -39,6 +39,7 @@ class ClassPedido{
             }
 
             const cliente = new Client;
+
             let verifyClient = await cliente.getClient(cpf);
 
             if(!verifyClient) {

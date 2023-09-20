@@ -7,7 +7,7 @@ const instanceUserControler = new UserControler
 
 userRoutes.get( "/", instanceUserControler.home )
 userRoutes.get( "/sal_e_luz_2023", instanceUserControler.saleluz) 
-userRoutes.get( "/eventos", instanceUserControler.eventos )
+userRoutes.get( "/eventos", instanceUserControler.eventos)
 userRoutes.get( "/new", instanceUserControler.new )
 
 // Authenticate

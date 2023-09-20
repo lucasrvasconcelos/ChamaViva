@@ -66,6 +66,7 @@ body
 {
     position: relative;
     background-color: var(--color-04);
+
     
 }
 
@@ -89,7 +90,7 @@ body section#inicial .inicial
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 55px;
+    gap: 130px;
 }
 
 body section#inicial .inicial .titulo_evento
@@ -216,9 +217,9 @@ body section#inicial .inicial .evento_descricao .dias img
 
 body section#inicial .inicial .evento_descricao p
 {
-    font-family: var(--font-05);
-    font-size: 16px;
-    width: 225px;
+    font-family: var(--font-07);
+    font-size: 25px;
+    width: 200px;
 }
 
 /* SHOP SHOP SHOP SHOP SHOP SHOP SHOP */
@@ -352,6 +353,15 @@ body section#shop .shop .comprar .detalhes_compra p
     color: black;
 }
 
+body section#shop .shop .comprar .detalhes_compra p:nth-child(2)
+{
+    text-align: center;
+    margin-top: 10px;
+    font-family: var(--font-05);
+    font-size: 18px;
+    color: var(--color-01);
+}
+
 body section#shop .shop .comprar form
 {
     position: relative;
@@ -425,6 +435,29 @@ body section#shop .shop .comprar form > div label input::placeholder
     text-align: center;
 }
 
+
+body section#shop .shop .comprar form > .submit input
+{
+    font-family: var(--font-07);
+    background-color: var(--color-06);
+    border: 1px solid var(--color-01);
+    color: var(--color-01);
+    font-size: 22px;
+    padding: 3px 15px;
+    box-shadow: 0px 0px 0px var(--color-07);
+    transition: all .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    cursor: pointer;
+}
+
+body section#shop .shop .comprar form > .submit input:hover
+{
+    transform: translateX(-3px) translateY(-3px);
+    box-shadow: 6px 6px 0px var(--color-02);
+    
+    border: 1px solid var(--color-02);
+    color: var(--color-02);
+}
+
 body section#shop .shop .comprar .shop_next
 {
     display: flex;
@@ -445,6 +478,12 @@ body section#shop .shop .comprar .shop_next button
     color: white;
     font-family: var(--font-05);
     font-weight: normal;
+    transition: all .2s ease-in-out;
+}
+
+body section#shop .shop .comprar .shop_next button:hover
+{
+    opacity: 0.9;
 }
 
 body section#shop .shop .comprar .shop_next button:nth-child(1)
@@ -734,7 +773,7 @@ body section#programacao .programacao .programacao-conteudo .programacao-itens .
     gap: 10px;
     padding-left: 5px;
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.254);
-    
+    user-select: none;
 }
 
 body section#programacao .programacao .programacao-conteudo .programacao-itens .programacao-item .programacao-detalhes .item:hover i
@@ -796,34 +835,32 @@ body section#programacao .programacao .programacao-conteudo .programacao-imagens
 {
     position: absolute;
     top: 0;
-    font-size: 20px;
-    max-width: 135px;
-    font-family: var(--font-05);
-    transform: translateX(100px) translateY(258px);
-    letter-spacing: 2px;
-    background-color: var(--color-03);
+    font-size: 28px;
+    max-width: 110px;
+    font-family: var(--font-07);
+    transform: translateX(109px) translateY(239px);
+    background-color: rgba(255, 255, 255, 0.545);
+    border: 0.2px solid var(--color-01);
     padding: 4px 8px;
     border-radius: 6px;
-    color: var(--color-07);
+    color: var(--color-01);
     transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     user-select: none;
     text-align: right;
 }
 
-
-
-
 body section#programacao .programacao .programacao-conteudo .programacao-imagens > span:nth-child(4)
 {
     position: absolute;
     bottom: 0;
-    font-size: 20px;
-    max-width: 155px;
-    font-family: var(--font-05);
+    font-size: 28px;
+    max-width: 110px;
+    font-family: var(--font-07);
     transform: translateX(-75px) translateY(-120px);
-    letter-spacing: 2px;
-    background-color: var(--color-02);
-    color: var(--color-06);
+    letter-spacing: 0px;
+    background-color: rgba(255, 255, 255, 0.545);
+    color: var(--color-01);
+    border: 0.2px solid var(--color-01);
     padding: 4px 8px;
     border-radius: 6px;
     transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -838,6 +875,11 @@ body section#programacao .programacao .programacao-conteudo .programacao-imagens
     color: var(--color-07);
 }
 
+body section#oferta
+{
+    padding-bottom: 13px;
+}
+
 body section#oferta .oferta
 {
     display: flex;
@@ -846,6 +888,10 @@ body section#oferta .oferta
     flex-direction: column;
     gap: 25px;
     overflow: hidden;
+    padding: 0 0 30px 0;
+    background-image: url(../../img/SAL_E_LUZ/Effect/coins.webp);
+    background-size: 200%;
+    background-attachment:fixed ;
 }
 
 body section#oferta .oferta .titulo-oferta
@@ -927,6 +973,75 @@ body section#oferta .oferta .qrcode .images img
     transform: translateX(-158px) translateY(-100px);
 
 }
+
+body section#mais-info
+{
+    padding: 0;
+}
+
+body section#mais-info .mais-info
+{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 80px 0;
+    position: relative;
+}
+
+body section#mais-info .mais-info .title-info
+{
+    background-color: var(--color-04);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+body section#mais-info .mais-info .title-info h1
+{
+    font-family: var(--font-05);
+    font-size: 24px;
+}
+
+body section#mais-info .mais-info .title-info a
+{
+    display: block;
+    text-align: center;
+    font-family: var(--font-07);
+    margin-top: 55px;
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+    background-color: var(--color-01);
+}
+
+body section#mais-info .mais-info .title-info a:hover
+{
+    background-color: var(--color-02);
+}
+
+body section#mais-info .mais-info .background_fotos
+{
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+body section#mais-info .mais-info .background_fotos img
+{
+    width: 100%;
+    filter: blur(2px);
+}
+
+
+
+
+
 
 
 
