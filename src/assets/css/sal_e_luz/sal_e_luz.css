@@ -1090,21 +1090,23 @@ body section .background_2023
     position: absolute;
     top: 0;
     left: 0;
-    width: 150%;
+    width: 200%;
 
     overflow: hidden;
 
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
+    letter-spacing: 2px;
 
-    opacity: 0.2;
+    opacity: 0.3;
     z-index: -999;
     transition: all .3s ease-in-out;
     user-select: none;
-    transform: translateX(0px) rotate(-5deg);
+    transform: translateX(-10px) rotate(0deg);
+  
 }
 
 
@@ -1115,9 +1117,8 @@ body section .background_2023 > span
     font-family: var(--font-06);
     font-size: 30px;
     font-weight: 800;
-    -webkit-text-stroke: 0.2px var(--color-01);
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0px 0 0px var(--color-01);
+    /* -webkit-text-stroke: 0.2px var(--color-01); */
+    -webkit-text-fill-color: var(--color-01);
     /*  */
 }
 

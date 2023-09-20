@@ -1,7 +1,7 @@
 const background = document.querySelectorAll(".background_2023")
 
 let index = 0
-const qtd = 600
+const qtd = 1000
 const text = "Sal e luz 2023"
 const time = 50
 
