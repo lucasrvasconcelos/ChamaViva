@@ -114,10 +114,10 @@ setInterval(countDate, 1000)
 
 ScrollReveal().reveal('.headline', 
 { 
-    delay: 100, 
+    delay: 0, 
     reset: true , 
-    duration: 2000,
-    distance: '60px',
+    duration: 1000,
+    distance: '20px',
     origin: 'bottom',
     // rotate: {
     //     x: 20,
