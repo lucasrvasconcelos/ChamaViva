@@ -205,7 +205,6 @@ main
   background-color: var(--color-01);
   background-image: url("../img/BACKGROUND/primary.jpg");
   position: relative;
-  overflow-x: hidden;
   z-index: 5;
 }
 

@@ -1,3 +1,4 @@
+
 const background = document.querySelectorAll(".background_2023")
 
 let index = 0
@@ -112,18 +113,8 @@ function formateTime(x){
 setInterval(countDate, 1000)
 
 
-ScrollReveal().reveal('.headline', 
-{ 
-    delay: 0, 
-    reset: false , 
-    duration: 2000,
-    distance: '35px',
-    origin: 'bottom',
-    // rotate: {
-    //     x: 20,
-    //     z: 20
-    // }
-    scale: 0.85,
-});
+
 
 //SUBMIT FORM
+
+

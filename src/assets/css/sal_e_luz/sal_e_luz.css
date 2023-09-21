@@ -1,36 +1,43 @@
 @font-face {
     font-family: "Retrim";
     src: url(".././fonts/Retrim\ Regular.ttf");
+    font-display: swap;
   }
 
   @font-face {
     font-family: "Kitchen";
     src: url(".././fonts/Kitchen\ Bold.otf");
+    font-display: swap;
   }
 
   @font-face {
     font-family: "RONORGERIONDEMO";
     src: url(".././fonts/RONORGERIONDEMO-Regular.otf");
+    font-display: swap;
   }
  
   @font-face {
     font-family: "Mantilda";
     src: url(".././fonts/Mantilda\ _\ Briant.otf");
+    font-display: swap;
   }
 
   @font-face {
     font-family: "Lemon";
     src: url(".././fonts/LEMONMILK-Bold.otf");
+    font-display: swap;
   }
 
   @font-face {
     font-family: "Edo";
     src: url(".././fonts/edosz.ttf");
+    font-display: swap;
   }
 
   @font-face {
     font-family: "Staatliches";
     src: url(".././fonts/Staatliches-Regular.ttf");
+    font-display: swap;
   }
 
 
@@ -66,9 +73,6 @@ body
 {
     position: relative;
     background-color: var(--color-04);
-    width: 100%;
-    height: 100%;
-    
 }
 
 body .loading
@@ -76,7 +80,7 @@ body .loading
     width: 100vw;
     height: 100vh;
     background-color: var(--color-04);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -86,6 +90,7 @@ body .loading
     gap: 15px;
     user-select: none;
     overflow: hidden;
+    z-index: 999;
 }
 
 body .loading > div
