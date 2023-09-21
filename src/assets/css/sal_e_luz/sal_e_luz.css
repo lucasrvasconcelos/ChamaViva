@@ -702,6 +702,7 @@ body section#more .more
     width: 100%;
     padding: 50px 0;
     z-index: 999;
+    overflow: hidden;
 }
 
 body section#more .more .event_image
@@ -1345,4 +1346,85 @@ body section .background_2023 > span
     {
         padding: 0;
     }
+}
+
+
+@media (min-width: 1150px){
+
+    body section#inicial
+    {
+        padding-top: 160px;
+    }
+
+    body section#inicial .inicial
+    {
+        flex-direction: row;
+        gap: 260px;
+    }
+
+    body section#inicial .inicial .titulo_evento .image_evento img
+    {
+        width: 120px;
+    }
+    body section#inicial .inicial .titulo_evento .image_evento img:nth-child(1)
+    {
+        top: -134px;
+        right: -179px;
+    }
+
+    body section#inicial .inicial .titulo_evento .image_evento img:nth-child(2) {
+        bottom: -90px;
+        left: -150px;
+    }
+
+    body section#inicial .inicial .titulo_evento .titulo
+    {
+        transform: scale(1.5);
+    }
+
+    body section#inicial .inicial .evento_descricao .dias h1
+    {
+        font-size: 68px;
+    }
+
+    body section#inicial .inicial .evento_descricao .dias img
+    {
+        max-width: 400px;
+    }
+
+    body section#inicial .inicial .evento_descricao p
+    {
+        width: 265px;
+        font-size: 25px;
+    }
+
+    body section#shop .shop
+    {
+        flex-direction: row-reverse;
+        gap: 110px;
+    }
+
+    body section#programacao .programacao .programacao-conteudo .programacao-imagens img:nth-child(1)
+    {
+       transform: translateX(-240px) translateY(-30px);
+       transition: all .3s ease-in-out;
+    }
+
+    body section#programacao .programacao .programacao-conteudo .programacao-imagens img:nth-child(1):hover
+    {
+       transform: translateX(-240px) translateY(-30px) scale(1.05);
+    }
+
+    body section#programacao .programacao .programacao-conteudo .programacao-imagens img:nth-child(2)
+    {
+        transform: translateX(261px) translateY(10px);
+        transition: all .3s ease-in-out;
+    }
+
+    body section#programacao .programacao .programacao-conteudo .programacao-imagens img:nth-child(2):hover
+    {
+        transform: translateX(261px) translateY(10px) scale(1.05);
+    }
+
+
 }

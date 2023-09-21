@@ -45,10 +45,10 @@ $(window).on("load", function () {
     { 
         delay: 0, 
         reset: true , 
-        duration: 200,
-        distance: '200px',
-        origin: 'top',
-        opacity: 0,
+        duration: 2000,
+        distance: '45px',
+        origin: 'bottom',
+        opacity: 1,
         // rotate: {
         //     x: 20,
         //     z: 20
