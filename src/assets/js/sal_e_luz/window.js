@@ -26,8 +26,35 @@ $(window).on("load", function () {
         // }
         scale: 0.85,
     });
-    
 
+    ScrollReveal().reveal('.headline_02', 
+    { 
+        delay: 0, 
+        reset: true , 
+        duration: 3000,
+        distance: '45px',
+        origin: 'bottom',
+        // rotate: {
+        //     x: 20,
+        //     z: 20
+        // }
+        scale: 0.85,
+    });
+
+    ScrollReveal().reveal('.headline_03', 
+    { 
+        delay: 0, 
+        reset: true , 
+        duration: 200,
+        distance: '200px',
+        origin: 'top',
+        opacity: 0,
+        // rotate: {
+        //     x: 20,
+        //     z: 20
+        // }
+        scale: 0.85,
+    });
 
         loadind.style.display = 'none'
         

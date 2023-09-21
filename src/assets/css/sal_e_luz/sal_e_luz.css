@@ -362,8 +362,10 @@ body section#inicial .inicial .evento_descricao .dias img
 
 body section#inicial .inicial .evento_descricao p
 {
-    font-family: var(--font-07);
+    font-family: var(--font-06);
     font-size: 25px;
+    color: var(--color-07);
+    text-shadow: 3px 3px 0px var(--color-04);
     width: 200px;
 }
 
@@ -525,13 +527,31 @@ body section#shop .shop .comprar form > div
     align-items: center;
     justify-content: center;
     gap: 15px;
+
+}
+
+body section#shop .shop .comprar form 
+{
+    overflow: hidden;
 }
 
 body section#shop .shop .comprar form > div.active-form
 {
     display: flex;
+    animation: animeForm 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2) alternate both;
+    
 }
 
+@keyframes animeForm {
+    from 
+    {
+        transform: translateY(100%);
+    }
+    to
+    {
+        transform: translateX(0%);
+    }
+}
 
 body section#shop .shop .comprar form > div label
 {
@@ -542,6 +562,7 @@ body section#shop .shop .comprar form > div label
     gap: 15px;
     font-family: var(--font-06);
 }
+
 body section#shop .shop .comprar form > div label input
 {
     padding: 5px 10px;
@@ -733,6 +754,7 @@ body section#more .more .event_image .image-content .image img
     top: -31px;
     left: -10px;
     user-select: none;
+
 }
 
 body section#more .more .event_image .image-content h1
@@ -743,8 +765,7 @@ body section#more .more .event_image .image-content h1
     font-size: 19px;
     font-family: var(--font-07);
     color: var(--color-04);
-    z-index: 10;
-
+    z-index: -1;
 }
 
 body section#more .more .event_image p.p_01
@@ -755,6 +776,7 @@ body section#more .more .event_image p.p_01
     transform: translateX(27px);
     font-weight: normal;
     letter-spacing: 0.5px;
+    z-index: -1;
 }
 
 body section#more .more .event_image p.p_02
@@ -768,6 +790,7 @@ body section#more .more .event_image p.p_02
     transform:rotateZ(90deg) translateX(56px) translateY(-26.5px);
     font-weight: normal;
     letter-spacing: 0.5px;
+    z-index: -1;
 }
 
 body section#more .more .event_image p.p_03
@@ -779,8 +802,9 @@ body section#more .more .event_image p.p_03
     bottom: 0;
     left: 0;
     font-weight: normal;
-    transform: rotateZ(-90deg) translateX(82px) translateY(-36.5px);
+    transform: rotateZ(-90deg) translateX(83px) translateY(-36.5px);
     letter-spacing: 0.5px;
+    z-index: 10;
 }
 
 body section#more .more .event_image span
@@ -1013,10 +1037,11 @@ body section#programacao .programacao .programacao-conteudo .programacao-imagens
 }
 
 
-body section#programacao .programacao .programacao-conteudo .programacao-imagens span:hover
+body section#programacao .programacao .programacao-conteudo .programacao-imagens > span:hover
 {
-    background-color: var(--color-03);
-    color: var(--color-07);
+    background-color: var(--color-01);
+    color: var(--color-06);
+    border: 1px solid var(--color-01);
 }
 
 body section#oferta
@@ -1035,6 +1060,19 @@ body section#oferta .oferta
     padding: 0 0 30px 0;
     background-image: url(../../img/SAL_E_LUZ/Effect/coins.webp);
     background-attachment:fixed ;
+    background-size: 30%;
+    animation: AnimeBackground 20s ease-in-out infinite alternate;
+}
+
+@keyframes AnimeBackground {
+    0%
+    {
+        background-position: 0% 0%;
+    }
+    100%
+    {
+        background-position: 100% 100%;
+    }
 }
 
 body section#oferta .oferta .titulo-oferta
@@ -1214,3 +1252,97 @@ body section .background_2023 > span
 }
 
 
+@media (min-width: 900px) {
+    body section#more .more
+    {
+        padding: 200px 0;
+    }
+
+    body section#more .more .event_image
+    {
+        transform: scale(1.8);
+    }
+    
+    body section#programacao .programacao .programacao-conteudo .programacao-itens
+    {
+        width: 620px;
+        gap: 32px;
+    }
+
+    body section#programacao .programacao .programacao-conteudo .programacao-itens .programacao-item > span
+    {
+        font-size: 22px;
+    }
+
+    body section#programacao .programacao .programacao-conteudo .programacao-itens .programacao-item .programacao-detalhes .item span
+    {
+        font-size: 24px;
+    }
+
+    body section#programacao .programacao .programacao-conteudo .programacao-imagens
+    {
+        padding: 80px 0;
+        flex-direction: row;
+    }
+
+    body section#programacao .programacao .programacao-conteudo .programacao-imagens img:nth-child(1)
+    {
+        transform: translateX(-150px) translateY(-20px);
+    }
+
+    body section#programacao .programacao .programacao-conteudo .programacao-imagens img:nth-child(1):hover
+    {
+        transform: translateX(-135px) translateY(-20px);
+    }
+
+    body section#programacao .programacao .programacao-conteudo .programacao-imagens img:nth-child(2)
+    {
+        transform: translateX(131px) translateY(10px);
+    }
+
+    body section#programacao .programacao .programacao-conteudo .programacao-imagens img:nth-child(2):hover
+    {
+        transform: translateX(120px) translateY(-10px);
+    }
+
+    body section#programacao .programacao .programacao-conteudo .programacao-imagens > span:nth-child(3)
+    {
+        max-width: 160px;
+        transform: translateX(59px) translateY(199px);
+    }
+
+    body section#programacao .programacao .programacao-conteudo .programacao-imagens > span:nth-child(3):hover
+    {
+        transform: translateX(59px) translateY(190px);
+    }
+
+    body section#programacao .programacao .programacao-conteudo .programacao-imagens > span:nth-child(4)
+    {
+        max-width: 230px;
+        transform: translateX(-125px) translateY(-100px);
+    }
+
+    body section#programacao .programacao .programacao-conteudo .programacao-imagens > span:nth-child(4):hover
+    {
+        transform: translateX(-125px) translateY(-110px);
+    }
+
+    body section#oferta .oferta
+    {
+        flex-direction: row;
+        gap: 90px;
+    }
+
+    
+
+    body section#oferta .oferta > div
+    {
+        align-items: center;
+        justify-content: center;
+    }
+
+    body section#oferta .oferta .qrcode
+    {
+        padding: 0;
+    }
+}
