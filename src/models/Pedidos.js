@@ -25,4 +25,5 @@ Pedidos.hasOne(ItensPedidos, {
   }
 })
 
+
 export default Pedidos;

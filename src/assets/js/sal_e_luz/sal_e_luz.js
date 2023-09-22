@@ -1,27 +1,23 @@
 
 const background = document.querySelectorAll(".background_2023")
 
-let index = 0
-const qtd = 1000
 const text = "Sal e luz 2023"
 const time = 50
 
 background.forEach((element) =>{
-    
-        setInterval( ()=>{
-            if(index < qtd){
 
+    const paiBackground = element.parentNode
+
+    setInterval(() => {
+        if(element.offsetHeight <= paiBackground.offsetHeight){
             const spanElement = document.createElement("span")
             spanElement.textContent = text
             element.appendChild(spanElement)
-            index++
-        } else 
-        {
+        } else {
             element.textContent = ''
-            index=0
         }
-
-        } , time)
+    }, time);
+        
 })
 
 const check = document.querySelectorAll(".options_shop label input")
@@ -49,14 +45,20 @@ const nextButton = document.querySelector(".comprar .shop_next #right")
 
 backButton.style.display = 'none'
 
-console.log(dadosForm.length)
 let indexPag = 0
 
 nextButton.addEventListener('click', () => {
     if (indexPag < dadosForm.length - 1){
-        dadosForm[indexPag].classList.remove("active-form")
-        indexPag++
-        dadosForm[indexPag].classList.add("active-form")
+        const valor = dadosForm[indexPag].querySelector('input').value
+        if(!valor){
+            return alert("Necessário informar valor")
+        } else
+        {
+            dadosForm[indexPag].classList.remove("active-form")
+            indexPag++
+            dadosForm[indexPag].classList.add("active-form")
+        }
+        
     }
 
     showButton(indexPag)
@@ -112,9 +114,39 @@ function formateTime(x){
 
 setInterval(countDate, 1000)
 
+const QRcode_copy = document.querySelector(".qrcode-img img")
+const ChavePix = document.querySelector(".chave span")
+const chaveCopiar = document.querySelector(".chave span span.copiar")
+
+QRcode_copy.addEventListener("click", () => {
+    navigator.clipboard.writeText('00020101021126450014br.gov.bcb.pix0123chamavivaadbj@gmail.com5204000053039865802BR5925Jaiane Caroline Nasciment6009SAO PAULO622905251H3HFG5ZN7F561J6HN2FHKB3E63046F47')
+    alert("código qrcode copiado!")
+})
+
+ChavePix.addEventListener("click", () => {
+
+    navigator.clipboard.writeText('saleluzadbj@gmail.com');
+    
+    const chaveCopiarStyle = getComputedStyle(chaveCopiar);
+
+    if(chaveCopiarStyle.display== 'none'){
+        return alert("chave pix copiada!");
+    }
+
+    chaveCopiar.textContent = "copiado ✔️";
+    
+    setTimeout(() => {
+        chaveCopiar.textContent = 'copiar';
+    }, 500);
+
+})
 
 
 
-//SUBMIT FORM
+
+
+
+
+
 
 

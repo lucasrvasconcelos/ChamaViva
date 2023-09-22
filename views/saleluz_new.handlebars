@@ -25,11 +25,9 @@
                 </div>
                 <p>Estamos muito animados em convidá-los para nosso evento Sal e Luz</p>
             </div>
-
-            {{!-- <img src="img/SAL_E_LUZ/Icons/tinta_01.svg" alt=""> --}}
         </div>
-        <div class="background_2023" />
 
+        <div class="background_2023"/>
     </section>
 
     <section id="shop">
@@ -42,7 +40,7 @@
                     <div class="left">
                         <img src="img/SAL_E_LUZ/BLUSA_03.png" />
                     </div>
-                    
+
                     <div class="back">
                         <img src="img/SAL_E_LUZ/BLUSA_03.png" />
                     </div>
@@ -56,7 +54,7 @@
                     <label for="front"> <i class="ph ph-arrow-up"></i>
                         <input type="radio" name="radio" id="front" checked="true">
                     </label>
-                    
+
                     <label for="left"> <i class="ph ph-arrow-left"></i>
                         <input type="radio" name="radio" id="left">
                     </label>
@@ -71,7 +69,7 @@
                 </div>
 
             </div>
-            
+
             <div class="comprar">
                 <div class="titulo_compra headline">
                     <h1>ADQUIRA</h1>
@@ -81,26 +79,23 @@
                     <p>Tamanhos/Preços/Formas de pagamento </p>
                     <p>35,00 R$</p>
                 </div>
-                {{!-- <div class="link_form">
-                    <a target="_blank" href="https://docs.google.com/forms/d/1l4J_Al1huE4JS7H9f26OiLDei9ZSTl3KRdQ_BL3zMH4/viewform?edit_requested=true">CLique aqui</a>
-                </div> --}}
 
                 <form action="/sendform" method="post" class="headline">
                     <div class="cpf active-form">
-                        <label for="cpf"> CPF/CNPJ
-                            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
+                        <label for="cpf"> CPF
+                            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="11">
                         </label>
                     </div>
 
                     <div class="telefone">
                         <label for="telefone"> Telefone
-                            <input type="tel" id="telefone" name="contato" placeholder="00 00000-0000">
+                            <input type="tel" id="telefone" name="contato" placeholder="00 00000-0000" >
                         </label>
                     </div>
 
                     <div class="nome">
                         <label for="nome"> Nome
-                            <input type="text" id="nome" name="nome" placeholder="digite">
+                            <input type="text" id="nome" name="nome" placeholder="digite" >
                         </label>
                     </div>
                     <div class="produto">
@@ -108,7 +103,7 @@
                             <input type="hidden" name="idProduto" id="idProduto" value="1">
                         </label>
                         <label for="quantidade"> Quantidade
-                            <input type="number" id="quantidade" name="qtd" value="1">
+                            <input type="number" id="quantidade" name="qtd" min="1" >
                         </label>
 
                         <label for="tamanho"> Tamanhos
@@ -228,7 +223,7 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
 
     <section id="oferta">
@@ -243,16 +238,39 @@
             </div>
             <div class="qrcode headline">
                 <div class="qrcode-img">
-                <img src="img/BACKGROUND/qrcode.png" alt="qrcode">
+                    <img src="img/BACKGROUND/qrcode.png" alt="qrcode">
                 </div>
                 <div class="chave">
                     <h1>CHAVE PIX</h1>
-                    <span>saleluzadbj@gmail.com</span>
-                </div>
-                <div class="images">
-                    {{!-- <img src="img/SAL_E_LUZ/Effect/coins.webp" alt="coins"> --}}
+                    <span> saleluzadbj@gmail.com 
+                        <span class="copiar">
+                            copiar
+                        </span>
+                    </span>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="endereco">
+        <div class="endereco">
+            <div class="iframe">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15924.405574935703!2d-38.59476441548384!3d-3.788103765543001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74c48b1a77ae1%3A0x798d04db4894a472!2sR.%20Luminosa%2C%20585%20-%20Granja%20Portugal%2C%20Fortaleza%20-%20CE%2C%2060540-755!5e0!3m2!1spt-BR!2sbr!4v1695380966850!5m2!1spt-BR!2sbr" allowfullscreen="yes" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="swiper">
+                <div class="foto-igreja swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/fotos_igreja/01.webp" alt="Nossa igreja">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/fotos_igreja/02.webp" alt="Nossa igreja">
+                    </div>
+                </div>
+                <span>R. LUMINOSA, 585 - GRANJA PORTUGAL</span>
+            </div>
+
+            <div class="background_2023"></div>
         </div>
     </section>
 
@@ -261,7 +279,7 @@
             <div class="title-info">
                 <h1>PARA SABER</h1>
                 <h1><i class="ph ph-plus"></i> INFORMAÇÕES</h1>
-                <a href="">Clique aqui</a>
+                <a href="https://www.instagram.com/chamavivaadbj/" target="_blank">Clique aqui</a>
             </div>
         </div>
     </section>

@@ -26,4 +26,6 @@ const ItensPedidos = sequelize.define("ItensPedidos", {
     timestamps: false
 })
 
+
+
 export default ItensPedidos;

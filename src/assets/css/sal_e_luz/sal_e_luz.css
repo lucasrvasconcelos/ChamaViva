@@ -1061,7 +1061,7 @@ body section#oferta .oferta
     padding: 0 0 30px 0;
     background-image: url(../../img/SAL_E_LUZ/Effect/coins.webp);
     background-attachment:fixed ;
-    background-size: 30%;
+    background-size: 50%;
     animation: AnimeBackground 20s ease-in-out infinite alternate;
 }
 
@@ -1141,12 +1141,16 @@ body section#oferta .oferta .qrcode .chave h1
 body section#oferta .oferta .qrcode .chave span
 {
     font-family: var(--font-07);
-    margin-top: 10px;
     padding: 5px 10px;
     background-color: white;
     border: 0.5px dotted var(--color-07);
     letter-spacing: 1px;
     border-radius: 4px;
+}
+
+body section#oferta .oferta .qrcode .chave span span.copiar
+{
+    display: none;
 }
 
 body section#oferta .oferta .qrcode .images img
@@ -1206,10 +1210,77 @@ body section#mais-info .mais-info .title-info a:hover
     background-color: var(--color-02);
 }
 
+body section#endereco
+{
+    padding: 0;
+    overflow: hidden;
+}
+
+body section#endereco .endereco
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 65px  8px;
+    gap: 38px;
+}
+
+body section#endereco .endereco .iframe iframe
+{
+    height: 200px;
+    width: 320px ;
+    border: 0.5px solid var(--color-07);
+    box-shadow: 10px 10px 0px var(--color-02),
+                    -10px -10px 0px var(--color-01),
+                    -10px 10px 0px var(--color-02),
+                    10px -10px 0px var(--color-01);
+    border-radius: 4px;
+    background-color: var(--color-04);
+                
+}
 
 
+body section#endereco .endereco .swiper
+{
+    box-shadow: 10px 10px 0px var(--color-01),
+                -10px -10px 0px var(--color-02),
+                -10px 10px 0px var(--color-01),
+                10px -10px 0px var(--color-02);
+    border-radius: 4px;
+    position: relative;
+}
 
 
+body section#endereco .endereco .swiper .foto-igreja
+{
+    max-width: 320px;
+}
+
+body section#endereco .endereco .swiper .foto-igreja .swiper-slide
+{
+    height: 100%;
+
+}
+
+body section#endereco .endereco .swiper .foto-igreja .swiper-slide img
+{
+    width: 100%;
+    background-color: transparent;
+}
+
+body section#endereco .endereco .swiper span
+{
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: var(--color-04);
+    font-size: 20px;
+    font-family: var(--font-07);
+    text-align: center;
+}
 
 
 
@@ -1331,7 +1402,7 @@ body section .background_2023 > span
     body section#oferta .oferta
     {
         flex-direction: row;
-        gap: 90px;
+        gap: 200px;
     }
 
     
@@ -1345,6 +1416,63 @@ body section .background_2023 > span
     body section#oferta .oferta .qrcode
     {
         padding: 0;
+    }
+
+    body section#endereco .endereco
+    {
+        padding: 25px 0;
+        flex-direction: row;
+        margin-bottom: 15px;
+    }
+
+    body section#endereco .endereco .swiper
+    {
+        margin: 0;
+    }
+
+    body section#endereco .endereco .swiper span
+    {
+        font-size: 28px;
+    }
+
+    body section#mais-info .mais-info .title-info
+    {
+        width: 500px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+
+    body section#mais-info .mais-info .title-info h1 {
+        font-size: 38px;
+        text-align: center;
+    }
+
+    body section#mais-info .mais-info .title-info a
+    {
+        font-size: 25px;
+        width: 100%;
+    }
+
+    body section#endereco .endereco
+    {
+        flex-direction: column;
+    }
+
+    body section#endereco .endereco .iframe iframe
+    {
+
+        width: 480px;
+        height: 370px;
+    }
+
+    body section#endereco .endereco .swiper .foto-igreja
+    {
+        max-width: 492px;
+
     }
 }
 
@@ -1404,6 +1532,44 @@ body section .background_2023 > span
         gap: 110px;
     }
 
+    body section#oferta .oferta .qrcode .chave span
+    {
+        font-size: 28px;
+        position: relative;
+        display: block;
+        overflow: hidden;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body section#oferta .oferta .qrcode .chave span span.copiar
+    {
+        position: absolute;
+        bottom: -100px;
+        font-size: 20px;
+        left: 0;
+        width: 100%;
+        transition: all .2s ease-in-out;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    body section#oferta .oferta .qrcode .chave span:hover span.copiar
+    {
+        bottom: 0px;
+        background-color: var(--color-01);
+        letter-spacing: 2px;
+        color: var(--color-04);
+    }
+
     body section#programacao .programacao .programacao-conteudo .programacao-imagens img:nth-child(1)
     {
        transform: translateX(-240px) translateY(-30px);
@@ -1426,5 +1592,11 @@ body section .background_2023 > span
         transform: translateX(261px) translateY(10px) scale(1.05);
     }
 
+    body section#endereco .endereco
+    {
+        padding: 85px 0;
+        flex-direction: row;
+    }
+    
 
 }
