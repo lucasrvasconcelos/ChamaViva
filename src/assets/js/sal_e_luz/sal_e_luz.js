@@ -32,10 +32,10 @@ function setImage(image){
 
     const flip = document.querySelector("body section#shop .shop .shop_imagem .flip")
 
-    image == "front" ? flip.style.transform = "rotateY(0deg)" : console.log("Front X");
-    image == "left" ? flip.style.transform = "rotateY(90deg)": console.log("Left X");
-    image == "back" ? flip.style.transform = "rotateY(180deg)": console.log("Left X");
-    image == "right" ? flip.style.transform = "rotateY(270deg)": console.log("Left X");
+    image == "front" ? flip.style.transform = "rotateY(0deg)" : false;
+    image == "left" ? flip.style.transform = "rotateY(90deg)": false;
+    image == "back" ? flip.style.transform = "rotateY(180deg)": false;
+    image == "right" ? flip.style.transform = "rotateY(270deg)": false;
 
 }
 
@@ -48,21 +48,36 @@ backButton.style.display = 'none'
 let indexPag = 0
 
 nextButton.addEventListener('click', () => {
+
     if (indexPag < dadosForm.length - 1){
-        const valor = dadosForm[indexPag].querySelector('input').value
-        if(!valor){
-            return alert("Necessário informar valor")
+        const input = dadosForm[indexPag].querySelector('input.required')
+
+        if(input){
+            const output_menssage = input.parentNode.querySelector(".output_menssage")
+            const verifiDados = DadosCheck(indexPag, input, output_menssage)
+
+            if(!verifiDados){
+                
+                dadosForm[indexPag].classList.remove("active-form")
+                indexPag++
+                dadosForm[indexPag].classList.add("active-form")
+            }
+
         } else
-        {
-            dadosForm[indexPag].classList.remove("active-form")
-            indexPag++
-            dadosForm[indexPag].classList.add("active-form")
-        }
-        
+            {
+                dadosForm[indexPag].classList.remove("active-form")
+                indexPag++
+                dadosForm[indexPag].classList.add("active-form")
+            }
+
     }
 
     showButton(indexPag)
 })
+
+function nexPage(){
+    
+}
 
 backButton.addEventListener('click', () => {
     if(indexPag > 0){
@@ -74,10 +89,76 @@ backButton.addEventListener('click', () => {
     showButton(indexPag)
 })
 
+function DadosCheck(indexPag, input, output_menssage){
+
+    console.log(input)
+
+    const valor = input.value
+
+    if (indexPag == 0){
+        //CPF
+        if(valor.length != 11){
+            output_menssage.textContent = "CPF deve ter 11 Dígitos"
+            input.focus()
+            erros.push(output_menssage.textContent)
+            return true
+        } else {
+            indexPag++
+            output_menssage.textContent = ''
+            return false
+        }
+        
+    }
+
+    if (indexPag == 1){
+        //CONTATO
+        if(valor.length < 8 || valor.length > 12){
+            output_menssage.textContent = "Número de contato inválido"
+            input.focus()
+            erros.push(output_menssage.textContent)
+            return true
+        } else {
+            indexPag++
+            output_menssage.textContent = ''
+            return false
+        }
+    }
+
+    if (indexPag == 2){
+        //NOME
+        if(valor.length < 3 || valor.length > 20){
+            output_menssage.textContent = "Mínimo de 3 caractéres e máximo 15"
+            input.focus()
+            erros.push(output_menssage.textContent)
+            return true
+        } else {
+            indexPag++
+            output_menssage.textContent = ''
+            return false
+        }
+    }
+
+    if (indexPag == 3){
+        //NOME
+        if(valor < 1 || valor > 20){
+            output_menssage.textContent = 'Mínimo 1 e máximo 20'
+            input.focus()
+            erros.push(output_menssage.textContent)
+            return true
+        } else {
+            indexPag++
+            output_menssage.textContent = ''
+            return false
+        }
+    }
+
+
+}
+
 function showButton(indexPag){
 
     indexPag > 0 ? backButton.style.display = 'block' : backButton.style.display = 'none';
-    indexPag == dadosForm.length -1 ? nextButton.style.display = 'none' : nextButton.style.display = 'block'
+    indexPag == dadosForm.length - 1 ? nextButton.style.display = 'none' : nextButton.style.display = 'block'
 }
 
 const days = document.querySelector("#days")
@@ -141,6 +222,46 @@ ChavePix.addEventListener("click", () => {
 
 })
 
+const enviarPedido = document.querySelector("body section#shop .shop .comprar form > .submit input")
+const form = document.querySelector("form")
+
+form.addEventListener("submit", async (event) => {
+    event.preventDefault()
+    
+    createPedido(enviarPedido, form)
+
+
+      
+
+})
+
+enviarPedido.addEventListener("click", (event)=> {
+    event.preventDefault()
+    createPedido(enviarPedido, form)
+})
+
+
+async function createPedido (enviarPedido, form){
+
+        enviarPedido.disabled = true
+        enviarPedido.value = 'Aguarde...'
+
+        const formData = new FormData(form)
+        const dataValuesForm = Object.fromEntries(formData)
+
+        fetch('/sendform', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(dataValuesForm)
+            })
+            .then(res=> res.json()).then(data => {
+                console.log('sucesso')
+                enviarPedido.value = 'Reservado com sucesso';
+            })
+            
+        }
 
 
 

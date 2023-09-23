@@ -15,10 +15,10 @@ const Clientes = sequelize.define("Clientes", {
     timestamps: false
 })
 
-Clientes.hasOne(Pedidos, {
-    foreignKey: {
-      name: 'idClient'
-    }
-  })
+// Clientes.hasOne(Pedidos, {
+//     foreignKey: {
+//       name: 'idClient'
+//     }
+//   })
 
 export default Clientes;

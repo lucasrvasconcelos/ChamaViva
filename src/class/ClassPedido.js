@@ -26,7 +26,7 @@ class ClassPedido{
             }
 
             const produtoDados = await Produtos.findOne({ where: { id: idProduto} });
-            const valorProduto = Number.parseFloat(produtoDados.Produtos_valor || 0) 
+            const valorProduto = Number.parseFloat( 35 || produtoDados.Produtos_valor) 
             const valorTotal = valorProduto * qtdProduto
 
             const dadosPedido = {

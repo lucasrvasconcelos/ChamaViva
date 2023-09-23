@@ -19,11 +19,11 @@ const Pedidos = sequelize.define("Pedidos", {
     timestamps: false
 })
 
-Pedidos.hasOne(ItensPedidos, {
-  foreignKey: {
-    name: 'idPedido'
-  }
-})
+// Pedidos.hasOne(ItensPedidos, {
+//   foreignKey: {
+//     name: 'idPedido'
+//   }
+// })
 
 
 export default Pedidos;
