@@ -1,7 +1,6 @@
 import sequelize from "./db.js"
 import { DataTypes } from 'sequelize';
 
-import ItensPedidos from './itensPedido.js';
 
 const Produtos = sequelize.define("Produtos", {
     Produtos_nome: DataTypes.STRING,
